@@ -1,0 +1,425 @@
+{
+  /// cursor user infinit
+  "lastUpdateCheck" : 0,
+  "updateVersion" : "",
+  "refreshToken" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhdXRoMHx1c2VyXzAxSk44RjJQQlZURjE4R1lUUlZHREpWWUE1IiwidGltZSI6IjE3NDA4MTk4MDMiLCJyYW5kb21uZXNzIjoiMTUzNTI1MmEtYjE1Yy00MWU4IiwiZXhwIjo0MzMyODE5ODAzLCJpc3MiOiJodHRwczovL2F1dGhlbnRpY2F0aW9uLmN1cnNvci5zaCIsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwgb2ZmbGluZV9hY2Nlc3MiLCJhdWQiOiJodHRwczovL2N1cnNvci5jb20ifQ.LQUQg-ISeCdSvvuajuiLazM3NI0tY7l3CFNRf7CL8JU",
+  "email" : "dolphinfight5655561@2925.com",
+  "updateChannel" : "none",
+  "updateMode" : "none",
+  "accessToken" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhdXRoMHx1c2VyXzAxSk44RjJQQlZURjE4R1lUUlZHREpWWUE1IiwidGltZSI6IjE3NDA4MTk4MDMiLCJyYW5kb21uZXNzIjoiMTUzNTI1MmEtYjE1Yy00MWU4IiwiZXhwIjo0MzMyODE5ODAzLCJpc3MiOiJodHRwczovL2F1dGhlbnRpY2F0aW9uLmN1cnNvci5zaCIsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwgb2ZmbGluZV9hY2Nlc3MiLCJhdWQiOiJodHRwczovL2N1cnNvci5jb20ifQ.LQUQg-ISeCdSvvuajuiLazM3NI0tY7l3CFNRf7CL8JU",
+  "updateAvailable" : false,
+  "disableUpdates": true,
+
+  /// format config
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "johnsoncodehk.vscode-tsconfig-helper"
+  },
+  "[less]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "Vue.volar"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  /// editors
+  "editor.fontFamily": "Maple Mono NF CN, JetBrainsMonoNL Nerd Font Mono, Geist Mono",
+  // "editor.fontFamily": "JetBrainsMonoNL Nerd Font Mono, monospace",
+  "editor.fontWeight": "300",
+  "editor.fontLigatures": true,
+  "editor.cursorBlinking": "expand",
+  "editor.accessibilitySupport": "off",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.find.addExtraSpaceOnTop": false,
+  "editor.guides.bracketPairs": "active",
+  "editor.stickyScroll.enabled": false,
+  "editor.lineNumbers": "relative",
+  "editor.foldingStrategy": "indentation",
+  "editor.stickyScroll.defaultModel": "foldingProviderModel",
+  "editor.inlineSuggest.enabled": true,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.renderWhitespace": "boundary",
+  "editor.suggestSelection": "first",
+  "editor.tabSize": 2,
+  "editor.unicodeHighlight.invisibleCharacters": false,
+  "editor.hover.sticky": true,
+  "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?",
+  "editor.rulers": [],
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": true,
+    "strings": true
+  },
+  "editor.fontSize": 14,
+
+  /// explorer
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.compactFolders": false,
+  "explorer.confirmPasteNative": false,
+
+  // 标题栏
+  "window.autoDetectColorScheme": true,
+  "window.dialogStyle": "custom",
+  // "window.nativeTabs": true, // this is great, macOS only
+  "window.title": "${rootName}",
+  // "window.titleBarStyle": "native",
+  "window.newWindowDimensions": "maximized",
+  "window.zoomLevel": 2,
+
+  // workbench
+  "workbench.editor.closeOnFileDelete": true,
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.limit.perEditorGroup": true,
+  "workbench.editor.limit.value": 5,
+  "workbench.fontAliasing": "default",
+  "workbench.list.smoothScrolling": true,
+  "workbench.preferredLightColorTheme": "Catppuccin Mocha",
+  "workbench.productIconTheme": "icons-carbon",
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.tree.expandMode": "singleClick",
+  "workbench.tree.indent": 10,
+  "workbench.sideBar.location": "left",
+  "workbench.preferredDarkColorTheme": "Catppuccin Macchiato",
+  "workbench.colorTheme": "Catppuccin Macchiato",
+  "workbench.tree.enableStickyScroll": true,
+  "workbench.iconTheme": "catppuccin-macchiato",
+
+  // prettier
+  "prettier.jsxSingleQuote": true,
+  "prettier.semi": false,
+  "prettier.printWidth": 80,
+  "prettier.tabWidth": 2,
+  "prettier.useTabs": false,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "none",
+  "prettier.bracketSpacing": true,
+  "prettier.bracketSameLine": false,
+  "prettier.singleAttributePerLine": true,
+
+  // files
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.simpleDialog.enable": true,
+  "files.associations": {
+    "*.cjson": "jsonc",
+    "*.wxs": "javascript",
+    "*.wxss": "css",
+    "*.css": "tailwindcss"
+  },
+
+  // git
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "git.untrackedChanges": "separate",
+
+  /// gitlens
+  "gitlens.views.commitDetails.files.layout": "tree",
+  "gitlens.ai.experimental.openai.model": "gpt-3.5-turbo-16k",
+  "gitlens.gitCommands.skipConfirmations": [
+    "fetch:command",
+    "stash-push:command",
+    "switch:command",
+    "branch-create:menu"
+  ],
+  "gitlens.advanced.messages": {
+    "suppressLineUncommittedWarning": true
+  },
+
+  // "github.copilot.enable": {
+  //   "*": true,
+  //   "plaintext": false,
+  //   "markdown": false,
+  //   "scminput": false,
+  //   "yaml": false
+  // },
+
+  /// terminal
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontWeight": "400",
+  "terminal.integrated.persistentSessionReviveProcess": "never",
+  "terminal.integrated.tabs.enabled": true,
+  "terminal.external.osxExec": "warp.app",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.defaultProfile.windows": "Windows PowerShell",
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
+  "terminal.integrated.profiles.windows": {
+    "Command Prompt": {
+      "args": [],
+      "icon": "terminal-cmd",
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ]
+    },
+  "terminal.integrated.enableVisualBell": true,
+    "Git Bash": {
+      "source": "Git Bash"
+    },
+    "PowerShell": {
+      "icon": "terminal-powershell",
+      "source": "PowerShell"
+    },
+    "Windows PowerShell": {
+      "path": "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+    }
+  },
+
+  /// scm
+  "scm.diffDecorationsGutterWidth": 2,
+  "scm.inputFontSize": 14,
+
+  /// debug
+  "debug.onTaskErrors": "debugAnyway",
+  "debug.console.fontSize": 14,
+  "diffEditor.ignoreTrimWhitespace": false,
+
+  /// search
+  "search.exclude": {
+    "**/.git": true,
+    "**/.github": true,
+    "**/.nuxt": true,
+    "**/.output": true,
+    "**/.pnpm": true,
+    "**/.vscode": true,
+    "**/.yarn": true,
+    "**/bower_components": true,
+    "**/dist/**": true,
+    "**/logs": true,
+    "**/node_modules": true,
+    "**/out/**": true,
+    "**/package-lock.json": true,
+    "**/pnpm-lock.yaml": true,
+    "**/tmp": true,
+    "**/yarn.lock": true
+  },
+  "emmet.includeLanguages": {
+    "wxml": "html"
+  },
+
+
+
+  "i18n-ally.displayLanguage": "zh-CN",
+  "security.workspace.trust.untrustedFiles": "open",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "cSpell.ignoreWords": [
+    "Attributify",
+    "Lazyload",
+    "Nuxt",
+    "Taskify",
+    "antd",
+    "checkcode",
+    "clsx",
+    "composables",
+    "endregion",
+    "gsap",
+    "iconfont",
+    "mockjs",
+    "pinia",
+    "scrollend",
+    "sider",
+    "swiper",
+    "tailwindcss",
+    "unocss",
+    "unplugin",
+    "usehooks",
+    "vant",
+    "vueuse"
+  ],
+  "errorLens.fontFamily": "'JetBrains Mono','Fira Code',Menlo,Monaco,'Courier New', monospace",
+  "cSpell.ignoreRegExpList": ["axios"],
+  "cSpell.customDictionaries": {
+    "custom-dictionary-user": {
+      "name": "custom-dictionary-user",
+      "path": "~/.cspell/custom-dictionary-user.txt",
+      "addWords": true,
+      "scope": "user"
+    }
+  },
+  "cSpell.languageSettings": [],
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "notebook.stickyScroll.enabled": true,
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode"
+  },
+  "vue.server.hybridMode": false,
+  // 启用系统剪切板
+  "vscode-neovim.compositeKeys": {
+    "jj": {
+      "command": "vscode-neovim.escape",
+      "args": []
+    },
+    "jk":{
+      "command": "vscode-neovim.escape",
+      "args": []
+    },
+    "]d": {
+      "command": "editor.action.marker.next",
+      "args": []
+    },
+    "[d": {
+      "command": "editor.action.marker.prev",
+      "args": []
+    },
+    "gc": {
+      "command": "editor.action.commentLine",
+      "args": []
+    }
+  },
+  "vim.useSystemClipboard": true,
+  // 开启折叠
+  "vim.foldfix": true,
+  // 突出显示当前搜索匹配的文本
+  "vim.hlsearch": true,
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false
+  },
+  "vim.leader": "<space>",
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    },
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
+    },
+    {
+      "before": ["k", "k"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["H"],
+      "after": ["^"]
+    },
+    {
+      "before": ["L"],
+      "after": ["$"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // 取消高亮
+    {
+      "before": ["<leader>", "n", "h"],
+      "commands": [":nohl"]
+    },
+    // 查看hover提示
+    {
+      "before": ["<leader>", "k"],
+      "commands": ["editor.action.showHover"]
+    },
+    // 跳转到下一个错误
+    {
+      "before": ["]", "d"],
+      "commands": ["editor.action.marker.next"]
+    },
+    // 跳转到上一个错误
+    {
+      "before": ["[", "d"],
+      "commands": ["editor.action.marker.prev"]
+    },
+    // 添加注释
+    {
+      "before": ["g", "c"],
+      "commands": ["editor.action.commentLine"]
+    },
+    // format document
+    {
+      "before": ["<leader>", "f"],
+      "commands": [
+        "editor.action.formatDocument.none",
+        "editor.action.formatDocument"
+      ]
+    }
+  ],
+  // ********** vim config end ********** //
+
+  // ********** eslint config ********** //
+  "editor.formatOnSave": false,
+  // Auto fix
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "never"
+  },
+  // Silent the stylistic rules in you IDE, but still auto fix them
+
+  /// liveServer
+  "liveServer.settings.donotVerifyTags": true,
+  "liveServer.settings.CustomBrowser": "chrome",
+  "liveServer.settings.NoBrowser": true,
+  "liveServer.settings.host": "localhost:2333",
+
+  /// extensions
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1,
+    "asvetliakov.vscode-neovim": 1
+  },
+  "extensions.autoUpdate": "onlyEnabledExtensions",
+  "extensions.ignoreRecommendations": true,
+  "accessibility.signals.terminalBell": {
+    "sound": "on"
+  },
+
+
+  /// plugin
+  "remote.extensionKind": {
+    "GitHub.copilot": ["ui"],
+    "github.copilot-chat": ["ui"]
+  },
+  "unocss.root": "packages/client",
+  "tailwindCSS.experimental.classRegex": [
+    ["tv\\((([^()]*|\\([^()]*\\))*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+  ],
+  "tailwindCSS.classAttributes": [
+    "class",
+    "className",
+    "ngClass",
+    "cn"
+  ],
+  "Codegeex.Privacy": true,
+  "prisma.showPrismaDataPlatformNotification": false,
+
+  /// projectManager
+  "projectManager.git.baseFolders": [
+    "Users/dccd/workspace"
+  ]
+}
