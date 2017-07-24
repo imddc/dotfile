@@ -23,7 +23,7 @@ config.webgpu_power_preference = "HighPerformance"
 config.font_size = 20
 config.line_height = 1.1
 
-config.font = wezterm.font("JetBrainsMono Nerd Font Mono", { italic = true })
+config.font = wezterm.font("JetBrainsMono Nerd Font Mono", { italic = false })
 -- config.font = wezterm.font("FiraCode Nerd Font Mono", { italic = true })
 config.harfbuzz_features = {
 	"calt",

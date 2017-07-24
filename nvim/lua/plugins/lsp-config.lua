@@ -3,15 +3,15 @@ return {
   dependencies = {
     'b0o/schemastore.nvim',
   },
+  opts = {
+    -- inlay_hints = { enabled = true },
+  },
   servers = {
     eslint = {
       settings = {
         workingDirectories = { mode = 'auto' },
       },
     },
-  },
-  inlay_hints = {
-    enabled = true,
   },
   codelens = {
     enabled = false,
@@ -49,8 +49,8 @@ return {
         },
       },
       filetypes = {
-        'typescript',
-        'javascript',
+        -- 'typescript',
+        -- 'javascript',
         -- 'typescriptreact',
         -- 'javascriptreact',
         'vue',

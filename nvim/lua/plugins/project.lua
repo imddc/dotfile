@@ -12,6 +12,7 @@ return {
       '~/Desktop/item/electron/*',
       '~/Desktop/item/test-demo/*',
       '~/Desktop/item/monorepo/*',
+      '~/Desktop/item/broswer-plugins/*',
     },
     -- _extmark_signs = false,
   },

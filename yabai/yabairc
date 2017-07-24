@@ -17,6 +17,8 @@ yabai -m rule --add app="^(WeChat|微信)" manage=off
 
 yabai -m rule --add app="^(QQ)" manage=off
 
+yabai -m rule --add app="^(LX Music)" manage=off
+
 yabai -m rule --add app="^(网易邮箱大师)" manage=off
 
 sudo yabai --load-sa
@@ -29,8 +31,7 @@ yabai -m config                                 \
     window_placement             second_child   \
     window_zoom_persist          on             \
     window_shadow                on             \
-    window_animation_duration    0.0            \
-    window_animation_frame_rate  120            \
+    window_animation_duration    0.3            \
     window_opacity_duration      0.3            \
     active_window_opacity        1.0            \
     normal_window_opacity        0.70           \
@@ -45,7 +46,7 @@ yabai -m config                                 \
     right_padding                12             \
     window_gap                   12             \
     layout                       bsp            \
-    mouse_modifier               alt             \
+    mouse_modifier               alt            \
     mouse_action1                move           \
     mouse_action2                resize         \
     mouse_drop_action            swap
