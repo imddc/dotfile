@@ -6,6 +6,14 @@
 
 ~/.config/wezterm/wezterm.lua
 
+## yabai
+
+~/.config/yabai/yabairc
+
+## yabai
+
+~/.config/skhd/skhdrc
+
 ## tmux
 
 ~/.tmux.conf
