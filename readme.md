@@ -1,6 +1,7 @@
 ## preview
 
-![preview](./snippets/wezterm.png)
+![nvim](./snippets/wezterm.png)
+![preview](./snippets/tmux+yabai+skhd.png)
 
 ## wezterm
 
@@ -10,7 +11,7 @@
 
 ~/.config/yabai/yabairc
 
-## yabai
+## skhd
 
 ~/.config/skhd/skhdrc
 
