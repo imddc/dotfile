@@ -15,6 +15,10 @@ yabai -m rule --add app="^(Alibaba Cloud Client)$" manage=off
 
 yabai -m rule --add app="^(WeChat|微信)" manage=off
 
+yabai -m rule --add app="^(QQ)" manage=off
+
+yabai -m rule --add app="^(网易邮箱大师)" manage=off
+
 sudo yabai --load-sa
 
 # global settings
