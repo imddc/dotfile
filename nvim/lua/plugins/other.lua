@@ -1,9 +1,8 @@
 return {
   'mg979/vim-visual-multi',
   'f-person/git-blame.nvim',
-  'github/copilot.vim',
+  -- 'github/copilot.vim',
   -- 'norcalli/nvim-colorizer.lua',
-  'mattn/emmet-vim',
 
   -- mini indent
   -- { 'echasnovski/mini.nvim', version = '*' },
