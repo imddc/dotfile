@@ -1,6 +1,8 @@
 return {
   'neovim/nvim-lspconfig',
-  -- 'b0o/schemastore.nvim',
+  dependencies = {
+    'b0o/schemastore.nvim',
+  },
   servers = {
     eslint = {
       settings = {
@@ -17,14 +19,6 @@ return {
   config = function()
     local lspconfig = require 'lspconfig'
 
-    -- -- graphql
-    -- lspconfig.graphql.setup {
-    --   filetypes = {
-    --     'graphql',
-    --     'gql',
-    --   },
-    -- }
-
     -- lua
     lspconfig.lua_ls.setup {
       settings = {
@@ -36,49 +30,28 @@ return {
       },
     }
 
-    lspconfig.tsserver.setup {
-      filetypes = {
-        'vue',
-      },
-      init_options = {
-        plugins = {
-          {
-            name = '@vue/typescript-plugin',
-            location = '/path/to/@vue/language-server',
-            languages = { 'vue' },
-          },
-        },
-      },
-    }
-
-    lspconfig.volar.setup {
-      init_options = {
-        vue = {
-          hybridMode = false,
-        },
-      },
-    }
-
     -- No need to set `hybridMode` to `true` as it's the default value
     local mason_registry = require 'mason-registry'
     local vue_language_server_path = mason_registry
       .get_package('vue-language-server')
       :get_install_path() .. '/node_modules/@vue/language-server'
     lspconfig.tsserver.setup {
+      -- on_attach = function(client, bufnr)
+      --   -- 禁用 tsserver 的格式化功能，我们将使用 ESLint 来格式化代码
+      --   client.resolved_capabilities.document_formatting = false
+      -- end,
       init_options = {
         plugins = {
           {
             name = '@vue/typescript-plugin',
             location = vue_language_server_path,
-            languages = { 'vue' },
+            languages = { 'vue', 'javascript', 'typescript' },
           },
         },
       },
       filetypes = {
-        -- 'typescript',
-        -- 'javascript',
-        -- 'javascriptreact',
-        -- 'typescriptreact',
+        'typescript',
+        'javascript',
         'vue',
       },
     }
@@ -132,6 +105,26 @@ return {
     lspconfig.dockerls.setup {}
 
     -- jsonsl
-    lspconfig.jsonls.setup {}
+    lspconfig.jsonls.setup {
+      capabilities = require('cmp_nvim_lsp').default_capabilities(
+        vim.lsp.protocol.make_client_capabilities()
+      ),
+
+      settings = {
+        json = {
+          schemas = require('schemastore').json.schemas {
+            replace = {
+              ['package.json'] = {
+                description = 'package.json overridden',
+                fileMatch = { 'package.json' },
+                name = 'package.json',
+                url = 'https://json.schemastore.org/package.json',
+              },
+            },
+          },
+          validate = { enable = true },
+        },
+      },
+    }
   end,
 }

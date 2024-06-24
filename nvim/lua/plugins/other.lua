@@ -5,7 +5,6 @@ return {
   -- 'norcalli/nvim-colorizer.lua',
 
   -- mini indent
-  -- { 'echasnovski/mini.nvim', version = '*' },
   {
     'echasnovski/mini.nvim',
     version = false,
