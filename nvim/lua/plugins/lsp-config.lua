@@ -19,6 +19,9 @@ return {
   config = function()
     local lspconfig = require 'lspconfig'
 
+    local capabilities = vim.lsp.protocol.make_client_capabilities()
+    capabilities.textDocument.completion.completionItem.snippetSupport = true
+
     -- lua
     lspconfig.lua_ls.setup {
       settings = {
@@ -36,10 +39,6 @@ return {
       .get_package('vue-language-server')
       :get_install_path() .. '/node_modules/@vue/language-server'
     lspconfig.tsserver.setup {
-      -- on_attach = function(client, bufnr)
-      --   -- 禁用 tsserver 的格式化功能，我们将使用 ESLint 来格式化代码
-      --   client.resolved_capabilities.document_formatting = false
-      -- end,
       init_options = {
         plugins = {
           {
@@ -58,10 +57,29 @@ return {
     -- No need to set `hybridMode` to `true` as it's the default value
     lspconfig.volar.setup {}
 
+    lspconfig.eslint.setup {
+      on_attach = function(client, bufnr)
+        vim.api.nvim_create_autocmd('BufWritePre', {
+          buffer = bufnr,
+          command = 'EslintFixAll',
+        })
+      end,
+      filetypes = {
+        'javascript',
+        'javascriptreact',
+        'typescript',
+        'typescriptreact',
+        'vue',
+      },
+    }
+
     -- html
-    lspconfig.html.setup {}
+    lspconfig.html.setup { capabilities = capabilities, filetypes = { 'html' } }
     -- css
-    lspconfig.cssls.setup {}
+    lspconfig.cssls.setup {
+      capabilities = capabilities,
+      filetypes = { 'css', 'scss', 'less', 'sass' },
+    }
 
     -- emmet
     local capabilities = vim.lsp.protocol.make_client_capabilities()
