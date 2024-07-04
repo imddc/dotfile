@@ -3,7 +3,6 @@ return {
   opts = {
     projects = { -- define project roots
       '~/workspace/*',
-      '~/.config/*',
       '~/Desktop/item/front/*',
       '~/Desktop/item/forks/*',
       '~/Desktop/item/jz/*',
@@ -12,9 +11,9 @@ return {
       '~/Desktop/item/backend/*',
       '~/Desktop/item/electron/*',
       '~/Desktop/item/test-demo/*',
-      '~/Desktop/item/mobile/*',
       '~/Desktop/item/monorepo/*',
     },
+    -- _extmark_signs = false,
   },
   init = function()
     -- enable saving the state of plugins in the session
@@ -23,6 +22,7 @@ return {
   dependencies = {
     { 'nvim-lua/plenary.nvim' },
     { 'Shatur/neovim-session-manager' },
+    -- { 'nvim-telescope/telescope.nvim', tag = '0.1.4' },
   },
   lazy = false,
   priority = 100,

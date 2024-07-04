@@ -20,10 +20,11 @@ config.max_fps = 60
 config.front_end = "WebGpu"
 config.webgpu_power_preference = "HighPerformance"
 
-config.font_size = 19
+config.font_size = 20
 config.line_height = 1.1
 
-config.font = wezterm.font("JetBrainsMono Nerd Font")
+config.font = wezterm.font("JetBrainsMono Nerd Font Mono", { italic = true })
+-- config.font = wezterm.font("FiraCode Nerd Font Mono", { italic = true })
 config.harfbuzz_features = {
 	"calt",
 	"liga",
@@ -57,7 +58,7 @@ config.native_macos_fullscreen_mode = true
 config.window_close_confirmation = "NeverPrompt"
 config.window_decorations = "RESIZE"
 config.window_background_opacity = 0.9
-config.macos_window_background_blur = 70
+config.macos_window_background_blur = 30
 config.inactive_pane_hsb = {
 	saturation = 0.9,
 	brightness = 0.65,
