@@ -26,8 +26,8 @@ keymap.set('n', '<leader>nh', ':nohl<CR>', { desc = 'Clear search highlights' })
 -- bufferline
 keymap.set('n', '<c-h>', ':BufferLineCyclePrev<cr>')
 keymap.set('n', '<c-l>', ':BufferLineCycleNext<cr>')
-keymap.set('n', '<c-s-h>', ':BufferLineMovePrev<cr>')
-keymap.set('n', '<c-s-l>', ':BufferLineMoveNext<cr>')
+-- keymap.set('n', '<c-s-h>', ':BufferLineMovePrev<cr>')
+-- keymap.set('n', '<c-s-l>', ':BufferLineMoveNext<cr>')
 keymap.set('n', "<leader>'", ':BufferLineCloseOthers<cr>')
 keymap.set('n', '<leader>q', ':BufferLinePickClose<cr>')
 
@@ -42,3 +42,12 @@ keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
 --
 keymap.set('n', '<leader>d', '<cmd>Telescope neovim-project discover<cr>')
 keymap.set('n', '<leader>h', '<cmd>Telescope neovim-project history<cr>')
+
+local builtin = require 'telescope.builtin'
+keymap.set('n', '<leader>,', builtin.find_files, {})
+keymap.set('n', '<leader>.', builtin.live_grep, {})
+
+keymap.set('n', 'i', function()
+  return string.match(vim.api.nvim_get_current_line(), '%g') == nil and 'cc'
+    or 'i'
+end, { expr = true, noremap = true })

@@ -1,22 +1,13 @@
 return {
   'mg979/vim-visual-multi',
   'f-person/git-blame.nvim',
-  -- 'github/copilot.vim',
-  -- 'norcalli/nvim-colorizer.lua',
 
-  -- mini indent
+  -- 添加 emoji
   {
-    'echasnovski/mini.nvim',
-    version = false,
-    config = function()
-      require('mini.indentscope').setup {}
+    'hrsh7th/nvim-cmp',
+    dependencies = { 'hrsh7th/cmp-emoji' },
+    opts = function(_, opts)
+      table.insert(opts.sources, { name = 'emoji' })
     end,
-  },
-
-  -- auto close pairs
-  {
-    'windwp/nvim-autopairs',
-    event = 'InsertEnter',
-    opts = {},
   },
 }

@@ -1,30 +1,21 @@
 return {
-  'stevearc/conform.nvim',
-  lazy = true,
-  event = { 'BufReadPre', 'BufNewFile' }, -- to disable, comment this out
-  config = function()
-    require('conform').setup {
-
+  {
+    'stevearc/conform.nvim',
+    opts = {
       formatters_by_ft = {
+        go = { 'goimports', 'gofumpt' },
         lua = { 'stylua' },
-        -- vue = { 'prettier' },
-        -- javascript = { 'prettier' },
-        -- typescript = { 'prettier' },
-        -- javascriptreact = { 'prettier' },
-        -- typescriptreact = { 'prettier' },
-        css = { 'prettier' },
-        html = { 'prettier' },
-        json = { 'prettier' },
-        yaml = { 'prettier' },
-        markdown = { 'prettier' },
-        graphql = { 'prettier' },
+        rust = { 'rustfmt' },
+        -- javascript = { 'biome-check', 'prettier' },
+        -- typescript = { 'biome-check', 'prettier' },
+        -- javascriptreact = { 'biome-check', 'prettier' },
+        -- typescriptreact = { 'biome-check', 'prettier' },
+        -- tsx = { 'biome-check', 'prettier' },
+        -- vue = { 'biome-check', 'prettier' },
+        css = { 'biome-check', 'prettier' },
+        json = { 'biome-check', 'prettier' },
+        toml = { 'taplo' },
       },
-      format_on_save = {
-        pattern = '.lua,*.graphql,*.css,*.html,*.json,*.yaml,*.md,*.gql,*.rs',
-        timeout_ms = 500,
-        async = false,
-        lsp_fallback = true,
-      },
-    }
-  end,
+    },
+  },
 }

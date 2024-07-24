@@ -1,126 +1,215 @@
 return {
-  -- 'sainnhe/everforest',
-  -- priority = 1000,
-  -- config = function()
-  --   vim.g.everforest_diagnostic_line_highlight = 1
-  --   vim.cmd [[colorscheme everforest]]
-  -- end,
+  {
+    'folke/tokyonight.nvim',
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require('tokyonight').setup {
+        style = 'storm',
+        transparent = true,
+        terminal_colors = true,
+        styles = {
+          comments = { italic = true },
+          keywords = { bold = true, italic = true },
+          sidebars = 'transparent',
+          floats = 'transparent',
+        },
+        plugins = {
+          all = true,
+        },
+        on_colors = function(colors) end,
+        on_highlights = function(highlights, colors)
+          highlights.LspInlayHint = {
+            bg = colors.none,
+            fg = colors.dark3,
+          }
+          highlights.Statement =
+            { fg = colors.magenta, italic = true, bold = true }
+          highlights.Type = { fg = colors.blue1, bold = true }
+          highlights['@tag.attribute.tsx'] =
+            { italic = true, fg = colors.green2 }
+          highlights['@keyword.import.tsx'] =
+            { bold = true, italic = true, fg = colors.red1 }
+          highlights['@keyword.import.typescript'] =
+            { bold = true, italic = true, fg = colors.red1 }
+          highlights['@keyword.export.tsx'] =
+            { bold = true, italic = true, fg = colors.red1 }
+          highlights['@keyword.export.typescript'] =
+            { bold = true, italic = true, fg = colors.red1 }
 
-  -- 'folke/tokyonight.nvim',
-  -- lazy = false,
-  -- priority = 1000,
-  -- opts = {},
-  -- config = function()
-  --   vim.cmd [[colorscheme tokyonight-night]]
-  -- end,
+          highlights['@keyword.import.rust'] = { bold = true, fg = colors.red }
+          highlights['@lsp.type.rust'] = { italic = true, fg = colors.red1 }
+          highlights['@lsp.type.namespace.rust'] = { fg = colors.red1 }
 
-  'catppuccin/nvim',
-  name = 'catppuccin',
-  priority = 1000,
-  config = function()
-    require('catppuccin').setup {
-      flavour = 'auto', -- latte, frappe, macchiato, mocha
-      background = { -- :h background
-        -- light = 'latte',
-        light = 'mocha',
-        dark = 'mocha',
-      },
-      transparent_background = true, -- disables setting the background color.
-      show_end_of_buffer = false, -- shows the '~' characters after the end of buffers
-      term_colors = false, -- sets terminal colors (e.g. `g:terminal_color_0`)
-      dim_inactive = {
-        enabled = false, -- dims the background color of inactive window
-        shade = 'dark',
-        percentage = 0.15, -- percentage of the shade to apply to the inactive window
-      },
-      no_italic = false, -- Force no italic
-      no_bold = false, -- Force no bold
-      no_underline = false, -- Force no underline
-      styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
-        comments = { 'italic' }, -- Change the style of comments
-        conditionals = { 'italic' },
-        loops = {},
-        functions = {},
-        keywords = {},
-        strings = {},
-        variables = {},
-        numbers = {},
-        booleans = {},
-        properties = {},
-        types = {},
-        operators = {},
-        -- miscs = {}, -- Uncomment to turn off hard-coded styles
+          highlights.RainbowDelimiterRed = { fg = '#FF5D62' }
+          highlights.RainbowDelimiterYellow = { fg = '#E6C384' }
+          highlights.RainbowDelimiterBlue = { fg = '#7FB4CA' }
+          highlights.RainbowDelimiterOrange = { fg = '#FFA066' }
+          highlights.RainbowDelimiterGreen = { fg = '#98BB6C' }
+          highlights.RainbowDelimiterViolet = { fg = '#D27E99' }
+          highlights.RainbowDelimiterCyan = { fg = '#7AA89F' }
+        end,
+      }
+    end,
+  },
+  {
+    'catppuccin/nvim',
+    lazy = false,
+    priority = 1000,
+    name = 'catppuccin',
+    opts = {
+      flavour = 'mocha',
+      transparent_background = true,
+      term_colors = true,
+      styles = {
+        comments = { 'italic' },
+        conditionals = { 'bold', 'italic' },
+        constants = { 'bold' },
+        keywords = { 'bold' },
+        functions = { 'italic' },
+        loops = { 'italic', 'bold' },
       },
       color_overrides = {},
-      custom_highlights = {},
-      default_integrations = true,
+      custom_highlights = function(C)
+        return {
+          RainbowDelimiterRed = { fg = '#FF1A75' },
+          RainbowDelimiterYellow = { fg = '#f1ff5e' },
+          RainbowDelimiterBlue = { fg = '#28C9FF' },
+          RainbowDelimiterOrange = { fg = '#FFAA54' },
+          RainbowDelimiterGreen = { fg = '#5eff6c' },
+          RainbowDelimiterViolet = { fg = '#bd5eff' },
+          RainbowDelimiterCyan = { fg = '#33FFFF' },
+          FloatBorder = { fg = C.yellow },
+          ['@tag.tsx'] = { bold = true },
+        }
+      end,
       integrations = {
-        cmp = true,
+        telescope = {
+          enabled = true,
+        },
+        dropbar = {
+          enabled = true,
+          color_mode = true,
+        },
+        flash = true,
+        barbar = true,
         gitsigns = true,
-        nvimtree = true,
-        treesitter = true,
+        leap = true,
+        neotree = true,
+        neotest = true,
+        mason = true,
+        noice = true,
         notify = true,
+        which_key = true,
+        semantic_tokens = true,
         mini = {
           enabled = true,
-          indentscope_color = '',
         },
-        -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
+        overseer = true,
+        cmp = true,
+        dap = true,
+        dap_ui = true,
+        treesitter_context = true,
+        treesitter = true,
+        window_picker = true,
+        rainbow_delimiters = true,
+        symbols_outline = true,
+        lsp_trouble = true,
+        illuminate = {
+          enabled = true,
+          lsp = true,
+        },
+        indent_blankline = {
+          enabled = true,
+          colored_indent_levels = true,
+        },
+        native_lsp = {
+          enabled = true,
+          virtual_text = {
+            errors = { 'italic' },
+            hints = { 'italic' },
+            warnings = { 'italic' },
+            information = { 'italic' },
+          },
+          underlines = {
+            errors = { 'underline' },
+            hints = { 'underline' },
+            warnings = { 'underline' },
+            information = { 'underline' },
+          },
+          inlay_hints = {
+            background = false,
+          },
+        },
       },
-    }
+    },
+  },
+  {
+    'rebelot/kanagawa.nvim',
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require('kanagawa').setup {
+        commentStyle = { italic = true },
+        functionStyle = {},
+        keywordStyle = {},
+        statementStyle = { bold = true },
+        typeStyle = { bold = true },
+        transparent = false,
+        terminalColors = true,
+        colors = {
+          palette = {},
+          theme = {
+            wave = {},
+            lotus = {},
+            dragon = {},
+            all = {
+              ui = {
+                bg_gutter = 'none',
+              },
+            },
+          },
+        },
+        overrides = function(colors)
+          local theme = colors.theme
+          return {
+            NormalFloat = { bg = 'none' },
+            FloatBorder = { bg = 'none' },
+            FloatTitle = { bg = 'none' },
 
-    -- setup must be called before loading
-    vim.cmd.colorscheme 'catppuccin'
-  end,
+            -- Save an hlgroup with dark background and dimmed foreground
+            -- so that you can use it where your still want darker windows.
+            -- E.g.: autocmd TermOpen * setlocal winhighlight=Normal:NormalDark
+            NormalDark = { fg = theme.ui.fg_dim, bg = 'none' },
 
-  -- 'loctvl842/monokai-pro.nvim',
-  -- config = function()
-  --   require('monokai-pro').setup {
-  --     transparent_background = false,
-  --     terminal_colors = true,
-  --     devicons = true, -- highlight the icons of `nvim-web-devicons`
-  --     styles = {
-  --       comment = { italic = true },
-  --       keyword = { italic = true }, -- any other keyword
-  --       type = { italic = true }, -- (preferred) int, long, char, etc
-  --       storageclass = { italic = true }, -- static, register, volatile, etc
-  --       structure = { italic = true }, -- struct, union, enum, etc
-  --       parameter = { italic = true }, -- parameter pass in function
-  --       annotation = { italic = true },
-  --       tag_attribute = { italic = true }, -- attribute of tag in reactjs
-  --     },
-  --     filter = 'pro', -- classic | octagon | pro | machine | ristretto | spectrum
-  --     -- Enable this will disable filter option
-  --     day_night = {
-  --       enable = false, -- turn off by default
-  --       day_filter = 'pro', -- classic | octagon | pro | machine | ristretto | spectrum
-  --       night_filter = 'spectrum', -- classic | octagon | pro | machine | ristretto | spectrum
-  --     },
-  --     inc_search = 'background', -- underline | background
-  --     background_clear = {
-  --       -- "float_win",
-  --       'toggleterm',
-  --       'telescope',
-  --       'cmp',
-  --       'mason',
-  --       -- "which-key",
-  --       'renamer',
-  --       'notify',
-  --       'nvim-tree',
-  --       -- "neo-tree",
-  --       'bufferline', -- better used if background of `neo-tree` or `nvim-tree` is cleared
-  --     }, -- "float_win", "toggleterm", "telescope", "which-key", "renamer", "neo-tree", "nvim-tree", "bufferline"
-  --     plugins = {
-  --       bufferline = {
-  --         underline_selected = false,
-  --         underline_visible = false,
-  --       },
-  --       indent_blankline = {
-  --         context_highlight = 'pro', -- default | pro
-  --         context_start_underline = false,
-  --       },
-  --     },
-  --   }
-  --
-  --   vim.cmd [[colorscheme monokai-pro]]
-  -- end,
+            -- Popular plugins that open floats will link to NormalFloat by default;
+            -- set their background accordingly if you wish to keep them dark and borderless
+            LazyNormal = { bg = 'none', fg = theme.ui.fg_dim },
+            MasonNormal = { bg = 'none', fg = theme.ui.fg_dim },
+            ['@tag.attribute.tsx'] = {
+              italic = true,
+              fg = theme.syn.identifier,
+            },
+            ['@keyword.import.tsx'] = { bold = true, fg = theme.syn.preproc },
+            ['@keyword.import.typescript'] = {
+              bold = true,
+              fg = theme.syn.preproc,
+            },
+            ['@keyword.export.tsx'] = { bold = true, fg = theme.syn.preproc },
+            ['@keyword.export.typescript'] = {
+              bold = true,
+              fg = theme.syn.preproc,
+            },
+          }
+        end,
+        theme = 'wave',
+      }
+    end,
+  },
+  {
+    'LazyVim/LazyVim',
+    opts = {
+      colorscheme = 'tokyonight',
+    },
+  },
 }

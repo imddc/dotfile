@@ -15,7 +15,6 @@ opt.hlsearch = true
 opt.incsearch = true
 
 opt.mouse:append 'a'
-opt.clipboard:append 'unnamedplus'
 
 opt.tabstop = 2
 opt.shiftwidth = 2
@@ -42,6 +41,9 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 vim.opt.pumblend = 0
 vim.opt.updatetime = 200
+
+vim.opt.wrap = true
+vim.opt.laststatus = 3
 
 vim.g.rustaceanvim = {
   tools = {
