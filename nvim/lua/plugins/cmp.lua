@@ -19,7 +19,6 @@ return {
           { name = 'luasnip', priority = 750, group_index = 1 },
           { name = 'path', priority = 250, group_index = 1 },
           { name = 'calc', priority = 100 },
-          { name = 'codeium', priority = '750', group_index = 1 },
         },
         window = {
           completion = cmp.config.window.bordered {
