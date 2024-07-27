@@ -1,34 +1,48 @@
 return {
-  'mfussenegger/nvim-lint',
-  envent = {
-    'BufReadPre',
-    'BufNewFile',
+  {
+    'mfussenegger/nvim-lint',
+    opts = function(_, opts)
+      table.insert(opts.linters_by_ft or {}, {
+        go = { 'golangcilint' },
+        dockerfile = { 'hadolint' },
+        javascript = { 'biomejs', 'eslint' },
+        typescript = { 'biomejs', 'eslint' },
+        javascriptreact = { 'biomejs', 'eslint' },
+        typescriptreact = { 'biomejs', 'eslint' },
+        vue = { 'biomejs', 'eslint' },
+      })
+      table.insert(opts.linters or {}, {
+        biomejs = {
+          condition = function(ctx)
+            return vim.fs.find({ 'biome.json', 'biome.jsonc' }, {
+              path = ctx.dirname,
+              upward = true,
+            })[1]
+          end,
+        },
+        eslint = {
+          condition = function(ctx)
+            return vim.fs.find({
+              '.eslintrc',
+              '.eslintrc.js',
+              '.eslintrc.cjs',
+              '.eslintrc.yaml',
+              '.eslintrc.yml',
+              '.eslintrc.json',
+              'eslint.config.js',
+              'eslint.config.mjs',
+              'eslint.config.cjs',
+              'eslint.config.ts',
+              'eslint.config.mts',
+              'eslint.config.cts',
+            }, {
+              path = ctx.dirname,
+              upward = true,
+            })[1]
+          end,
+        },
+      })
+      return opts
+    end,
   },
-  config = function()
-    local lint = require 'lint'
-
-    lint.linters_by_ft = {
-      javascript = { 'eslint' },
-      typescript = { 'eslint' },
-      javascriptreact = { 'eslint' },
-      typescriptreact = { 'eslint' },
-      vue = { 'eslint' },
-    }
-
-    local eslint_d = require 'lint.linters.eslint_d'
-    eslint_d.args = vim.tbl_extend('force', {
-      '--config',
-      function()
-        return vim.fn.getcwd() .. '/eslint.config.js'
-      end,
-    }, eslint_d.args)
-
-    local lint_augroup = vim.api.nvim_create_augroup('lint', { clear = true })
-    vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWritePost', 'InsertLeave' }, {
-      group = lint_augroup,
-      callback = function()
-        -- lint.try_lint()
-      end,
-    })
-  end,
 }
