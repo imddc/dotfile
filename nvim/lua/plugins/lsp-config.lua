@@ -42,6 +42,50 @@ return {
             },
           },
         },
+        gopls = {
+          settings = {
+            gopls = {
+              gofumpt = true,
+              codelenses = {
+                gc_details = false,
+                generate = true,
+                regenerate_cgo = true,
+                run_govulncheck = true,
+                test = true,
+                tidy = true,
+                upgrade_dependency = true,
+                vendor = true,
+              },
+              hints = {
+                assignVariableTypes = true,
+                compositeLiteralFields = true,
+                compositeLiteralTypes = true,
+                constantValues = true,
+                functionTypeParameters = true,
+                parameterNames = true,
+                rangeVariableTypes = true,
+              },
+              analyses = {
+                fieldalignment = true,
+                nilness = true,
+                unusedparams = true,
+                unusedwrite = true,
+                useany = true,
+              },
+              usePlaceholders = true,
+              completeUnimported = true,
+              staticcheck = true,
+              directoryFilters = {
+                '-.git',
+                '-.vscode',
+                '-.idea',
+                '-.vscode-test',
+                '-node_modules',
+              },
+              semanticTokens = true,
+            },
+          },
+        },
       },
       setup = {},
     },
@@ -106,7 +150,6 @@ return {
 
       -- html
       lspconfig.html.setup { capabilities = capabilities, filetypes = { 'html' } }
-
       -- css
       lspconfig.cssls.setup {
         capabilities = capabilities,
@@ -132,6 +175,15 @@ return {
 
       -- rust
       lspconfig.rust_analyzer.setup {
+        capabilities = capabilities,
+      }
+
+      -- go
+      lspconfig.gopls.setup {
+        capabilities = capabilities,
+      }
+
+      lspconfig.gofumpt.setup {
         capabilities = capabilities,
       }
 

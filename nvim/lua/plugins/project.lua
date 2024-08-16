@@ -8,6 +8,7 @@ return {
       '~/Desktop/item/jz/*',
       '~/Desktop/item/node/*',
       '~/Desktop/item/rust/*',
+      '~/Desktop/item/go/*',
       '~/Desktop/item/backend/*',
       '~/Desktop/item/electron/*',
       '~/Desktop/item/test-demo/*',

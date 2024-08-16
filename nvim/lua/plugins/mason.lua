@@ -23,6 +23,10 @@ return {
 
         -- rust
         'codelldb',
+
+        -- go
+        'gopls',
+        'gofumpt',
       },
     },
   },
