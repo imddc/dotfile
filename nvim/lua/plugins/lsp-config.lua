@@ -24,6 +24,24 @@ return {
             single_file_support = true,
           },
         },
+        taplo = {
+          keys = {
+            {
+              'K',
+              function()
+                if
+                  vim.fn.expand '%:t' == 'Cargo.toml'
+                  and require('crates').popup_available()
+                then
+                  require('crates').show_popup()
+                else
+                  vim.lsp.buf.hover()
+                end
+              end,
+              desc = 'Show Crate Documentation',
+            },
+          },
+        },
       },
       setup = {},
     },
@@ -44,13 +62,11 @@ return {
         },
       }
 
-      -- No need to set `hybridMode` to `true` as it's the default value
+      -- volar + tsserver
       local mason_registry = require 'mason-registry'
-
       local vue_language_server_path = mason_registry
         .get_package('vue-language-server')
         :get_install_path() .. '/node_modules/@vue/language-server'
-      -- No need to set `hybridMode` to `true` as it's the default value
       lspconfig.tsserver.setup {
         init_options = {
           plugins = {
@@ -69,11 +85,9 @@ return {
           'vue',
         },
       }
-      -- No need to set `hybridMode` to `true` as it's the default value
-      -- lspconfig.volar.setup {}
-
       lspconfig.volar.setup {}
 
+      -- eslint
       lspconfig.eslint.setup {
         on_attach = function(_, bufnr)
           vim.api.nvim_create_autocmd('BufWritePre', {
@@ -92,11 +106,19 @@ return {
 
       -- html
       lspconfig.html.setup { capabilities = capabilities, filetypes = { 'html' } }
+
       -- css
       lspconfig.cssls.setup {
         capabilities = capabilities,
-        filetypes = { 'css', 'scss', 'less', 'sass' },
+        filetypes = {
+          'css',
+          'scss',
+          'less',
+          'sass',
+          'vue',
+        },
       }
+
       -- tailwind
       lspconfig.tailwindcss.setup {
         color_square_width = 2,
@@ -107,6 +129,11 @@ return {
 
       -- docker
       lspconfig.dockerls.setup {}
+
+      -- rust
+      lspconfig.rust_analyzer.setup {
+        capabilities = capabilities,
+      }
 
       -- jsonsl
       lspconfig.jsonls.setup {

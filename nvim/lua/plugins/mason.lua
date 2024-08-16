@@ -1,6 +1,7 @@
 return {
   {
     'williamboman/mason.nvim',
+    optional = true,
     opts = {
       ensure_installed = {
         'stylua',
@@ -20,6 +21,7 @@ return {
         -- docker
         'hadolint',
 
+        -- rust
         'codelldb',
       },
     },
