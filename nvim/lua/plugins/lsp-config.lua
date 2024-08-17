@@ -132,6 +132,18 @@ return {
       lspconfig.volar.setup {}
 
       -- eslint
+      local customizations = {
+        { rule = 'style/*', severity = 'off', fixable = true },
+        { rule = 'format/*', severity = 'off', fixable = true },
+        { rule = '*-indent', severity = 'off', fixable = true },
+        { rule = '*-spacing', severity = 'off', fixable = true },
+        { rule = '*-spaces', severity = 'off', fixable = true },
+        { rule = '*-order', severity = 'off', fixable = true },
+        { rule = '*-dangle', severity = 'off', fixable = true },
+        { rule = '*-newline', severity = 'off', fixable = true },
+        { rule = '*quotes', severity = 'off', fixable = true },
+        { rule = '*semi', severity = 'off', fixable = true },
+      }
       lspconfig.eslint.setup {
         on_attach = function(_, bufnr)
           vim.api.nvim_create_autocmd('BufWritePre', {
@@ -142,9 +154,31 @@ return {
         filetypes = {
           'javascript',
           'javascriptreact',
+          'javascript.jsx',
           'typescript',
           'typescriptreact',
+          'typescript.tsx',
           'vue',
+          'html',
+          'markdown',
+          'json',
+          'jsonc',
+          'yaml',
+          'toml',
+          'xml',
+          'gql',
+          'graphql',
+          'astro',
+          'svelte',
+          'css',
+          'less',
+          'scss',
+          'pcss',
+          'postcss',
+        },
+        settings = {
+          -- Silent the stylistic rules in you IDE, but still auto fix them
+          rulesCustomizations = customizations,
         },
       }
 
@@ -183,7 +217,13 @@ return {
         capabilities = capabilities,
       }
 
+      -- go format
       lspconfig.gofumpt.setup {
+        capabilities = capabilities,
+      }
+
+      -- markdown
+      lspconfig.markdownlint.setup {
         capabilities = capabilities,
       }
 
