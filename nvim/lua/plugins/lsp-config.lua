@@ -7,13 +7,6 @@ return {
     opts = {
       inlay_hints = {
         enabled = true,
-        exclude = {
-          'typescriptreact',
-          'javascriptreact',
-          'javascript',
-          'typescript',
-          'vue',
-        },
       },
       codelens = {
         enabled = false,
@@ -39,50 +32,6 @@ return {
                 end
               end,
               desc = 'Show Crate Documentation',
-            },
-          },
-        },
-        gopls = {
-          settings = {
-            gopls = {
-              gofumpt = true,
-              codelenses = {
-                gc_details = false,
-                generate = true,
-                regenerate_cgo = true,
-                run_govulncheck = true,
-                test = true,
-                tidy = true,
-                upgrade_dependency = true,
-                vendor = true,
-              },
-              hints = {
-                assignVariableTypes = true,
-                compositeLiteralFields = true,
-                compositeLiteralTypes = true,
-                constantValues = true,
-                functionTypeParameters = true,
-                parameterNames = true,
-                rangeVariableTypes = true,
-              },
-              analyses = {
-                fieldalignment = true,
-                nilness = true,
-                unusedparams = true,
-                unusedwrite = true,
-                useany = true,
-              },
-              usePlaceholders = true,
-              completeUnimported = true,
-              staticcheck = true,
-              directoryFilters = {
-                '-.git',
-                '-.vscode',
-                '-.idea',
-                '-.vscode-test',
-                '-node_modules',
-              },
-              semanticTokens = true,
             },
           },
         },
@@ -215,17 +164,19 @@ return {
       -- go
       lspconfig.gopls.setup {
         capabilities = capabilities,
+        settings = {
+          gopls = {
+            analyses = {
+              unusedparams = true,
+            },
+            staticcheck = true,
+            gofumpt = true,
+          },
+        },
       }
 
       -- go format
-      lspconfig.gofumpt.setup {
-        capabilities = capabilities,
-      }
-
-      -- markdown
-      lspconfig.markdownlint.setup {
-        capabilities = capabilities,
-      }
+      -- lspconfig.gofumpt.setup {}
 
       -- jsonsl
       lspconfig.jsonls.setup {
