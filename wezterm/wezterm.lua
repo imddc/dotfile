@@ -13,7 +13,7 @@ end
 
 config.term = "xterm-256color"
 -- This is where you actually apply your config choices
-config.color_scheme = "Catppuccin Mocha"
+config.color_scheme = "Catppuccin Macchiato"
 
 config.animation_fps = 60
 config.max_fps = 60
@@ -23,8 +23,10 @@ config.webgpu_power_preference = "HighPerformance"
 config.font_size = 20
 config.line_height = 1.1
 
-config.font = wezterm.font("JetBrainsMono Nerd Font Mono", { italic = false })
+-- config.font = wezterm.font("JetBrainsMono Nerd Font Mono", { italic = false })
 -- config.font = wezterm.font("FiraCode Nerd Font Mono", { italic = true })
+config.font = wezterm.font("JetBrainsMonoNL Nerd Font Mono", { italic = false })
+
 config.harfbuzz_features = {
 	"calt",
 	"liga",
@@ -57,10 +59,10 @@ config.adjust_window_size_when_changing_font_size = false
 config.native_macos_fullscreen_mode = true
 config.window_close_confirmation = "NeverPrompt"
 config.window_decorations = "RESIZE"
-config.window_background_opacity = 0.9
-config.macos_window_background_blur = 30
+config.window_background_opacity = 1
+config.macos_window_background_blur = 18
 config.inactive_pane_hsb = {
-	saturation = 0.9,
+	saturation = 1,
 	brightness = 0.65,
 }
 config.force_reverse_video_cursor = true
