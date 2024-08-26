@@ -7,16 +7,37 @@ return {
     opts = {
       inlay_hints = {
         enabled = true,
+        exclude = {
+          'typescriptreact',
+          'javascriptreact',
+          'javascript',
+          'typescript',
+        },
       },
       codelens = {
         enabled = false,
       },
-      servers = {
-        biome = {
-          settings = {
-            single_file_support = true,
+      -- Enable lsp cursor word highlighting
+      document_highlight = {
+        enabled = true,
+      },
+      -- add any global capabilities here
+      capabilities = {
+        workspace = {
+          fileOperations = {
+            didRename = true,
+            willRename = true,
           },
         },
+      },
+      -- options for vim.lsp.buf.format
+      -- `bufnr` and `filter` is handled by the LazyVim formatter,
+      -- but can be also overridden when specified
+      format = {
+        formatting_options = nil,
+        timeout_ms = nil,
+      },
+      servers = {
         taplo = {
           keys = {
             {
@@ -40,7 +61,6 @@ return {
     },
     config = function()
       local lspconfig = require 'lspconfig'
-
       local capabilities = vim.lsp.protocol.make_client_capabilities()
       capabilities.textDocument.completion.completionItem.snippetSupport = true
 
@@ -93,6 +113,7 @@ return {
         { rule = '*quotes', severity = 'off', fixable = true },
         { rule = '*semi', severity = 'off', fixable = true },
       }
+
       lspconfig.eslint.setup {
         on_attach = function(_, bufnr)
           vim.api.nvim_create_autocmd('BufWritePre', {
@@ -132,17 +153,16 @@ return {
       }
 
       -- html
-      lspconfig.html.setup { capabilities = capabilities, filetypes = { 'html' } }
+      lspconfig.html.setup {
+        capabilities = capabilities,
+        filetypes = {
+          'html',
+        },
+      }
+
       -- css
       lspconfig.cssls.setup {
         capabilities = capabilities,
-        filetypes = {
-          'css',
-          'scss',
-          'less',
-          'sass',
-          'vue',
-        },
       }
 
       -- tailwind
@@ -174,9 +194,6 @@ return {
           },
         },
       }
-
-      -- go format
-      -- lspconfig.gofumpt.setup {}
 
       -- jsonsl
       lspconfig.jsonls.setup {
