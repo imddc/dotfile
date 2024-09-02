@@ -27,6 +27,10 @@ return {
         -- go
         'gopls',
         'gofumpt',
+
+        -- java
+        'jdtls',
+        'google-java-format',
       },
     },
   },

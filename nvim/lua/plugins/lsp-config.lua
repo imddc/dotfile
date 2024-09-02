@@ -195,6 +195,12 @@ return {
         },
       }
 
+      -- java
+
+      lspconfig.jdtls.setup {
+        capabilities = capabilities,
+      }
+
       -- jsonsl
       lspconfig.jsonls.setup {
         capabilities = require('cmp_nvim_lsp').default_capabilities(

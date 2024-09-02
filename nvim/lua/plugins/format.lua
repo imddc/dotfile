@@ -5,6 +5,13 @@ return {
       require('conform').setup {
         formatters_by_ft = {
           go = { 'goimports', 'gofumpt' },
+          java = function()
+            return {
+              exe = 'google-java-format',
+              args = { '--replace', '--', vim.api.nvim_buf_get_name(0) },
+              stdin = false,
+            }
+          end,
           lua = { 'stylua' },
           rust = { 'rustfmt' },
           javascript = { 'biome-check', 'prettier' },
