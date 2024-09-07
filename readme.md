@@ -23,6 +23,9 @@
 
 ~/.config/nvim
 
+## aerospace
+~/.config/aerospace/aerospace.toml
+
 ### plugins
 
 - lsp
