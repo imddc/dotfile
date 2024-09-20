@@ -43,7 +43,7 @@ key-mapping.preset = 'qwerty'
 # See https://nikitabobko.github.io/AeroSpace/guide#on-focus-changed-callbacks
 # See https://nikitabobko.github.io/AeroSpace/commands#move-mouse
 on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
-on-focus-changed = ['move-mouse window-lazy-center']
+# on-focus-changed = ['move-mouse window-lazy-center']
 
 # Gaps between windows (inner-*) and between monitor edges (outer-*).
 # Possible values:
@@ -110,10 +110,6 @@ alt-shift-minus = 'resize smart -50'
 alt-shift-equal = 'resize smart +50'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
-alt-1 = 'workspace 1'
-alt-2 = 'workspace 2'
-alt-3 = 'workspace 3'
-alt-4 = 'workspace 4'
 # In your config, you can drop workspace bindings that you don't need
 alt-u = 'workspace U'
 alt-i = 'workspace I'
@@ -121,21 +117,17 @@ alt-o = 'workspace O'
 alt-p = 'workspace P'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
-alt-shift-1 = 'move-node-to-workspace 1'
-alt-shift-2 = 'move-node-to-workspace 2'
-alt-shift-3 = 'move-node-to-workspace 3'
-alt-shift-4 = 'move-node-to-workspace 4'
 alt-shift-u = 'move-node-to-workspace U'
 alt-shift-i = 'move-node-to-workspace I'
 alt-shift-o = 'move-node-to-workspace O'
 alt-shift-p = 'move-node-to-workspace P'
 
-alt-shift-f = 'fullscreen'
+alt-shift-y = 'fullscreen'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
 alt-tab = 'workspace-back-and-forth'
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
-alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
+# alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
 alt-shift-semicolon = 'mode service'
@@ -154,22 +146,61 @@ alt-shift-j = ['join-with down', 'mode main']
 alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
+# window move
 [[on-window-detected]]
 if.app-id = 'company.thebrowser.Browser'
 run = "move-node-to-workspace U"
 
-[[on-window-detected]]
-if.app-id = 'com.google.Chrome'
-run = "move-node-to-workspace I"
-
+# cursor
 [[on-window-detected]]
 if.app-id = 'com.todesktop.230313mzl4w4u92'
 run = "move-node-to-workspace I"
+
+# idea
+[[on-window-detected]]
+if.app-id = 'com.jetbrains.intelli'
+run = "move-node-to-workspace I"
+
+#navicat
+[[on-window-detected]]
+if.app-id = 'com.navicat.NavicatPremium'
+run = ["layout floating", "move-node-to-workspace O"]
+
+# mailmaster
+[[on-window-detected]]
+if.app-id = 'com.netease.macmail'
+run = ["layout floating", "move-node-to-workspace O"]
+
+# obsidian
+[[on-window-detected]]
+if.app-id = 'md.obsidian'
+run = ["layout floating", "move-node-to-workspace O"]
 
 [[on-window-detected]]
 if.app-id = 'com.github.Wezterm'
 run = "move-node-to-workspace O"
 
 [[on-window-detected]]
+if.app-id = 'com.obsproject.obs-studio'
+run = ['layout floating', 'move-node-to-workspace O']
+
+[[on-window-detected]]
+if.app-id = 'com.google.Chrome'
+run = ['layout floating', 'move-node-to-workspace O']
+
+[[on-window-detected]]
+if.app-id = 'com.bili-message'
+run = ['layout floating', 'move-node-to-workspace O']
+
+[[on-window-detected]]
 if.app-id = 'com.tencent.xinWeChat'
-run = "move-node-to-workspace P"
+run = ["layout floating", "move-node-to-workspace P"]
+
+[[on-window-detected]]
+if.app-id = 'com.tencent.qq'
+run = ["layout floating", "move-node-to-workspace P"]
+
+[[on-window-detected]]
+if.app-id = 'com.apple.finder'
+run = ["layout floating"]
+
