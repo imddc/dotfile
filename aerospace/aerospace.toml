@@ -163,6 +163,11 @@ run = "move-node-to-workspace I"
 
 #navicat
 [[on-window-detected]]
+if.app-id = 'com.electron.lark'
+run = ["layout floating", "move-node-to-workspace O"]
+
+#navicat
+[[on-window-detected]]
 if.app-id = 'com.navicat.NavicatPremium'
 run = ["layout floating", "move-node-to-workspace O"]
 
@@ -193,14 +198,53 @@ if.app-id = 'com.bili-message'
 run = ['layout floating', 'move-node-to-workspace O']
 
 [[on-window-detected]]
-if.app-id = 'com.tencent.xinWeChat'
-run = ["layout floating", "move-node-to-workspace P"]
+if.app-id = 'me.qii404.another-redis-desktop-manager'
+run = ['layout floating', 'move-node-to-workspace O']
+
+[[on-window-detected]]
+if.app-id = 'net.xmind.vana.app'
+run = ['layout floating', 'move-node-to-workspace O']
 
 [[on-window-detected]]
 if.app-id = 'com.tencent.qq'
 run = ["layout floating", "move-node-to-workspace P"]
 
 [[on-window-detected]]
+if.app-id = 'com.bitcomet.macos'
+run = ["layout floating", "move-node-to-workspace P"]
+
+[[on-window-detected]]
 if.app-id = 'com.apple.finder'
 run = ["layout floating"]
 
+[[on-window-detected]]
+if.app-id = 'com.baidu.BaiduNetdisk-mac'
+run = ["layout floating"]
+
+[[on-window-detected]]
+if.app-id = 'SwitchHosts'
+run = ["layout floating"]
+ 
+[[on-window-detected]]
+if.app-id = 'com.tencent.meeting'
+run = ["layout floating"]
+
+[[on-window-detected]]
+if.app-id = 'cc.ffitch.shottr'
+run = ["layout floating"]
+
+[[on-window-detected]]
+if.app-id = 'ru.keepcoder.Telegram'
+run = ["layout floating"]
+
+[[on-window-detected]]
+if.app-id = 'cc.ffitch.shottr'
+run = ["layout floating"]
+
+[[on-window-detected]]
+if.app-id = 'com.electron.dockerdesktop'
+run = ["layout floating"]
+
+[[on-window-detected]]
+if.app-id = 'com.tencent.xinWeChat'
+run = ["layout floating"]
