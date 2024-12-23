@@ -1,6 +1,5 @@
--- 光标动画
 return {
-  "yamatsum/nvim-cursorline",
+  'yamatsum/nvim-cursorline',
   opts = {
     cursorline = {
       enable = true,

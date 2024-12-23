@@ -1,4 +1,3 @@
--- 高亮当前块
 return {
   {
     "shellRaining/hlchunk.nvim",

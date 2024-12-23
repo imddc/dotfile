@@ -1,7 +1,8 @@
 -- Keymaps are automatically loaded on the VeryLazy event
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
-
+--
+--
 vim.g.mapleader = " "
 
 local set = vim.keymap.set
@@ -31,6 +32,9 @@ set("n", "dw", 'vb"_d')
 
 set("n", "H", "^")
 set("n", "L", "$")
+
+-- space + s  => save
+set("n", "<leader>s", "<cmd>w<cr>")
 
 -- set('n', 'j', [[v:count?'j':'gj']], { noremap = true, expr = true })
 -- set('n', 'k', [[v:count?'k':'gk']], { noremap = true, expr = true })
