@@ -24,8 +24,6 @@ set("i", "jj", "<ESC>")
 -- keymap.set('i', 'jk', '<ESC>')
 -- keymap.set('i', 'kk', '<ESC>')
 
-set("n", "<c-s-a>", "ggVG")
-
 set("n", "x", '"_x')
 set("n", "dw", 'vb"_d')
 
@@ -45,6 +43,9 @@ set("n", "<c-l>", ":BufferLineCycleNext<cr>")
 -- keymap.set('n', '<c-s-l>', ':BufferLineMoveNext<cr>')
 set("n", "<leader>'", ":BufferLineCloseOthers<cr>")
 set("n", "<leader>q", ":BufferLinePickClose<cr>")
+
+-- neotree toggle
+set("n", "<leader>;", ":Neotree toggle<cr>")
 
 -- indent
 set("v", "<", "<gv")
