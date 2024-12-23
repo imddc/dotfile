@@ -1,4 +1,4 @@
-local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   -- bootstrap lazy.nvim
@@ -7,16 +7,16 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 
-require('lazy').setup {
+require("lazy").setup({
   ui = {
-    border = 'rounded',
+    border = "rounded",
     backdrop = 100,
   },
   spec = {
     -- add LazyVim and import its plugins
-    { 'nicholasxjy/LazyVim', import = 'lazyvim.plugins' },
-    { import = 'plugins' },
-    { import = 'plugins.lang' },
+    { "nicholasxjy/LazyVim", import = "lazyvim.plugins" },
+    { import = "plugins" },
+    { import = "plugins.lang" },
   },
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
@@ -27,26 +27,21 @@ require('lazy').setup {
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
-  install = {
-    colorscheme = {
-      'catppuccin',
-      'tokyonight',
-    },
-  },
+  install = { colorscheme = { "catppuccin", "tokyonight" } },
   checker = { enabled = true }, -- automatically check for plugin updates
   performance = {
     rtp = {
       -- disable some rtp plugins
       disabled_plugins = {
-        'gzip',
+        "gzip",
         -- "matchit",
         -- "matchparen",
         -- "netrwPlugin",
-        'tarPlugin',
-        'tohtml',
-        'tutor',
-        'zipPlugin',
+        "tarPlugin",
+        "tohtml",
+        "tutor",
+        "zipPlugin",
       },
     },
   },
-}
+})

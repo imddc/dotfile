@@ -1,7 +1,7 @@
 return {
-  'karb94/neoscroll.nvim',
-  event = 'VeryLazy',
+  "karb94/neoscroll.nvim",
+  event = "VeryLazy",
   config = function()
-    require('neoscroll').setup {}
+    require("neoscroll").setup({})
   end,
 }

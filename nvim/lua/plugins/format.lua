@@ -1,41 +1,51 @@
 return {
   {
-    'stevearc/conform.nvim',
-    opts = function()
-      require('conform').setup {
-        formatters_by_ft = {
-          go = { 'goimports', 'gofumpt' },
-          java = function()
-            return {
-              exe = 'google-java-format',
-              args = { '--replace', '--', vim.api.nvim_buf_get_name(0) },
-              stdin = false,
-            }
+    "stevearc/conform.nvim",
+    opts = {
+      formatters_by_ft = {
+        go = { "goimports", "gofumpt" },
+        lua = { "stylua" },
+        rust = { "rustfmt" },
+        javascript = { "biome-check", "prettier" },
+        typescript = { "biome-check", "prettier" },
+        javascriptreact = { "biome-check", "prettier" },
+        typescriptreact = { "biome-check", "prettier" },
+        tsx = { "biome-check", "prettier" },
+        css = { "biome-check", "prettier" },
+        json = { "biome-check", "prettier" },
+        toml = { "taplo" },
+      },
+      formatters = {
+        ["biome-check"] = {
+          condition = function(self, ctx)
+            return vim.fs.find({ "biome.json", "biome.jsonc" }, {
+              path = ctx.dirname,
+              upward = true,
+            })[1]
           end,
-          lua = { 'stylua' },
-          rust = { 'rustfmt' },
-          javascript = { 'biome-check', 'prettier' },
-          typescript = { 'biome-check', 'prettier' },
-          javascriptreact = { 'biome-check', 'prettier' },
-          typescriptreact = { 'biome-check', 'prettier' },
-          tsx = { 'biome-check', 'prettier' },
-          css = { 'biome-check', 'prettier' },
-          json = { 'biome-check', 'prettier' },
-          toml = { 'taplo' },
         },
-        format_on_save = {
-          timeout_ms = 500,
-          lsp_format = 'fallback',
+        prettier = {
+          condition = function(self, ctx)
+            return vim.fs.find({
+              ".prettierrc",
+              ".prettierrc.json",
+              ".prettierrc.yml",
+              ".prettierrc.yaml",
+              ".prettierrc.json5",
+              ".prettierrc.js",
+              ".prettierrc.cjs",
+              ".prettierrc.mjs",
+              ".prettierrc.toml",
+              "prettier.config.js",
+              "prettier.config.cjs",
+              "prettier.config.mjs",
+            }, {
+              path = ctx.dirname,
+              upward = true,
+            })[1]
+          end,
         },
-        notify_no_formatters = true,
-        notify_on_error = true,
-      }
-
-      vim.api.nvim_create_autocmd('BufWritePre', {
-        group = vim.api.nvim_create_augroup('EslintFixAll', { clear = true }),
-        pattern = { '*.tsx', '*.ts', '*.jsx', '*.js' },
-        command = 'silent! EslintFixAll',
-      })
-    end,
+      },
+    },
   },
 }

@@ -4,17 +4,17 @@
 -- * override the configuration of LazyVim plugins
 return {
   {
-    'folke/which-key.nvim',
-    opts = { preset = 'modern', win = { border = 'rounded' } },
+    "folke/which-key.nvim",
+    opts = { preset = "modern", win = { border = "rounded" } },
   },
   {
-    'williamboman/mason.nvim',
+    "williamboman/mason.nvim",
     opts = {
-      ui = { border = 'rounded' },
+      ui = { border = "rounded" },
     },
   },
   {
-    'folke/noice.nvim',
+    "folke/noice.nvim",
     opts = {
       presets = {
         lsp_doc_border = true,
@@ -23,8 +23,8 @@ return {
           views = {
             cmdline_popup = {
               position = {
-                row = '40%',
-                col = '50%',
+                row = "40%",
+                col = "50%",
               },
             },
           },
@@ -51,12 +51,12 @@ return {
     },
   },
   {
-    'folke/trouble.nvim',
+    "folke/trouble.nvim",
     opts = function(_, opts)
       opts.focus = true
       opts.preview = {
-        type = 'float',
-        border = 'rounded',
+        type = "float",
+        border = "rounded",
         size = {
           width = 0.5,
           height = 0.5,
@@ -65,8 +65,8 @@ return {
     end,
   },
   {
-    'folke/flash.nvim',
-    event = 'VeryLazy',
+    "folke/flash.nvim",
+    event = "VeryLazy",
     opts = {
       label = {
         uppercase = false,
@@ -76,9 +76,5 @@ return {
         },
       },
     },
-  },
-  {
-    'lukas-reineke/indent-blankline.nvim',
-    enabled = false,
   },
 }

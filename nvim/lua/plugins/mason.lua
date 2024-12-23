@@ -1,36 +1,26 @@
 return {
   {
-    'williamboman/mason.nvim',
-    optional = true,
+    "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
-        'stylua',
-        'selene',
+        "stylua",
+        "selene",
 
-        'shellcheck',
-        'shfmt',
+        "shellcheck",
+        "shfmt",
         -- frontend
-        'html-lsp',
-        'css-lsp',
-        'eslint-lsp',
-        'biome',
-        'prettier',
+        "html-lsp",
+        "css-lsp",
+        "eslint-lsp",
+        "biome",
+        "prettier",
         -- markdown
-        'markdownlint',
-        'marksman',
+        "markdownlint",
+        "marksman",
         -- docker
-        'hadolint',
+        "hadolint",
 
-        -- rust
-        'codelldb',
-
-        -- go
-        'gopls',
-        'gofumpt',
-
-        -- java
-        'jdtls',
-        'google-java-format',
+        "codelldb",
       },
     },
   },

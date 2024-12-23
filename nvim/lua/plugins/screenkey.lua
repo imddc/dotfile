@@ -1,10 +1,10 @@
 return {
-  'NStefan002/screenkey.nvim',
+  "NStefan002/screenkey.nvim",
   lazy = false,
-  version = '*',
+  version = "*",
   opts = {
     win_opts = {
-      border = 'rounded',
+      border = "rounded",
     },
   },
 }
