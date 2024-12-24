@@ -132,6 +132,8 @@ return {
         "regex",
         "tsx",
         "typescript",
+        "vue",
+        "css",
         "vim",
         "yaml",
       },
