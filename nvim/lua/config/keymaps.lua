@@ -52,11 +52,12 @@ set("v", "<", "<gv")
 set("v", ">", ">gv")
 
 --  lspsaga
-set("n", "K", "<cmd>Lspsaga hover_doc<cr>")
+-- set("n", "K", "<cmd>Lspsaga hover_doc<cr>")
+set("n", "<leader>k", "<cmd>Lspsaga hover_doc<cr>")
 
 --
-set("n", "<leader>d", "<cmd>Telescope neovim-project discover<cr>")
-set("n", "<leader>h", "<cmd>Telescope neovim-project history<cr>")
+-- set("n", "<leader>d", "<cmd>Telescope neovim-project discover<cr>")
+-- set("n", "<leader>h", "<cmd>Telescope neovim-project history<cr>")
 
 -- local builtin = require 'telescope.builtin'
 -- set('n', '<leader>,', builtin.find_files, {})
