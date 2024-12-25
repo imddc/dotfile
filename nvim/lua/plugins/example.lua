@@ -46,11 +46,11 @@ return {
     keys = {
       -- add a keymap to browse plugin files
       -- stylua: ignore
-      {
-        "<leader>fp",
-        function() require("telescope.builtin").find_files({ cwd = require("lazy.core.config").options.root }) end,
-        desc = "Find Plugin File",
-      },
+      -- {
+      -- "<leader>fp",
+      -- function() require("telescope.builtin").find_files({ cwd = require("lazy.core.config").options.root }) end,
+      -- desc = "Find Plugin File",
+      -- },
     },
     -- change some options
     opts = {
@@ -106,7 +106,7 @@ return {
           return true
         end,
         -- Specify * to use this function as a fallback for any server
-        -- ["*"] = function(server, opts) end,
+        ["*"] = function(server, opts) end,
       },
     },
   },
@@ -150,6 +150,7 @@ return {
       vim.list_extend(opts.ensure_installed, {
         "tsx",
         "typescript",
+        "css",
       })
     end,
   },
