@@ -51,9 +51,8 @@ set("n", "<leader>;", ":Neotree toggle<cr>")
 set("v", "<", "<gv")
 set("v", ">", ">gv")
 
--- choose then  move under or above line
-set("v", "J", ":m '>+1<CR>gv=gv")
-set("v", "K", ":m '<-2<CR>gv=gv")
+--  lspsaga
+set("n", "K", "<cmd>Lspsaga hover_doc<cr>")
 
 --
 set("n", "<leader>d", "<cmd>Telescope neovim-project discover<cr>")
@@ -66,3 +65,7 @@ set("n", "<leader>h", "<cmd>Telescope neovim-project history<cr>")
 set("n", "i", function()
   return string.match(vim.api.nvim_get_current_line(), "%g") == nil and "cc" or "i"
 end, { expr = true, noremap = true })
+
+-- choose then  move under or above line
+set("v", "J", ":m '>+1<CR>gv=gv")
+set("v", "K", ":m '<-2<CR>gv=gv")

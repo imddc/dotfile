@@ -2653,56 +2653,59 @@
 # italic_font      CaskaydiaMono Nerd Font Mono Italic
 # bold_italic_font CaskaydiaMono Nerd Font Mono Bold Italic
 
-font_size 18
-
 # UI
 cursor_shape block
-term xterm-256color
-background_opacity 0.86 
-remember_window_size yes
-hide_window_decorations titlebar-only
-confirm_os_window_close 0
-
-# 添加ansi码
-# map ctrl+\' send_text all \x1b[39;5u
-# map ctrl+\( send_text all \x1b[40;5u
-# map ctrl+\) send_text all \x1b[41;5u
-# map ctrl+, send_text all \x1b[44;5u
-# map ctrl++ send_text all \x1b[43;5u
-# map ctrl+- send_text all \x1b[45;5u
-# map ctrl+. send_text all \x1b[46;5u
-# map ctrl+\; send_text all \x1b[59;5u
-# map ctrl+= send_text all \x1b[61;5u
-# map ctrl+/ send_text all \x1b[47;5u
-# map ctrl+~ send_text all \x1b[126;5u
-# map ctrl+\` send_text all \x1b[96;5u
-# map ctrl+enter send_text all \x1b[13;5u
-# map super+s send_text all \x1b[115;9u
-# map super+/ send_text all \x1b[47;9u
-# map alt+c send_text all \x1b[99;9u
-
 cursor_trail 3
 cursor_trail_decay 0.1 0.45
 cursor_trail_start_threshold 2
 
-tab_bar_edge top
+hide_window_decorations titlebar-only
+window_padding_width	15
+background_opacity	0.98
+background_blur		30
+remember_window_size	yes
 
-macos_show_window_title_in none
+tab_bar_edge		top
+tab_bar_style		powerline
+tab_powerline_style	slanted
 
-mouse_map ctrl+left press ungrabbed,grabbed mouse_click_url
-open_url_with default
-copy_on_select yes
-scrollback_lines 2000
+# mouse_map ctrl+left press ungrabbed,grabbed mouse_click_url
+# open_url_with default
+# copy_on_select yes
+# scrollback_lines 2000
+
+# 查找文件
+map cmd+p send_text all :Telescope find_files\r
+
+# 保存
+map cmd+s send_text all \e:w\r
+
+# 全局查找
+map cmd+shift+f send_text all :Telescope live_grep\r
+
+# 折叠文件树
+map cmd+b send_text all :Neotree toggle\r
+
+# 打开project 列表
+map cmd+o send_text all :Telescope neovim-project discover\r
+
 
 # BEGIN_KITTY_THEME
 # Catppuccin-Macchiato
 include current-theme.conf
 # END_KITTY_THEME
 
-
 # BEGIN_KITTY_FONTS
-font_family      family="CaskaydiaCove Nerd Font Mono"
-bold_font        auto
-italic_font      auto
-bold_italic_font auto
+font_size 	 24
+# font_family      JetBrainsMonoNL Nerd Font Mono Italic
+
+font_family      Maple Mono NF Light
+bold_font        Maple Mono NF Bold
+italic_font      Maple Mono NF Italic
+bold_italic_font Maple Mono NF Bold Italic
+
+font_features 	 MapleMono-NF-Light +cv01 +ss02+ss04 +ss05 +zero
+font_features 	 MapleMono-NF-Bold +cv01 +ss02+ss04 +ss05 +zero
+font_features 	 MapleMono-NF-Italic +cv01 +ss02+ss04 +ss05 +zero
+font_features 	 MapleMono-NF-BoldItalic +cv01 +ss02+ss04 +ss05 +zero
 # END_KITTY_FONTS
