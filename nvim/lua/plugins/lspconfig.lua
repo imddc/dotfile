@@ -11,54 +11,41 @@ local customizations = {
   { rule = "*semi", severity = "off", fixable = true },
 }
 
-local lspconfig = require("lspconfig")
+-- local lspconfig = require("lspconfig")
 -- Enable eslint for all supported languages
-lspconfig.eslint.setup({
-  filetypes = {
-    "javascript",
-    "javascriptreact",
-    "javascript.jsx",
-    "typescript",
-    "typescriptreact",
-    "typescript.tsx",
-    "vue",
-    "html",
-    "markdown",
-    "json",
-    "jsonc",
-    "yaml",
-    "toml",
-    "xml",
-    "gql",
-    "graphql",
-    "astro",
-    "svelte",
-    "css",
-    "less",
-    "scss",
-    "pcss",
-    "postcss",
-  },
-  settings = {
-    -- Silent the stylistic rules in you IDE, but still auto fix them
-    rulesCustomizations = customizations,
-  },
-})
+-- lspconfig.eslint.setup({
+--   filetypes = {
+--     "javascript",
+--     "javascriptreact",
+--     "javascript.jsx",
+--     "typescript",
+--     "typescriptreact",
+--     "typescript.tsx",
+--     "vue",
+--     "html",
+--     "markdown",
+--     "json",
+--     "jsonc",
+--     "yaml",
+--     "toml",
+--     "xml",
+--     "gql",
+--     "graphql",
+--     "astro",
+--     "svelte",
+--     "css",
+--     "less",
+--     "scss",
+--     "pcss",
+--     "postcss",
+--   },
+--   settings = {
+--     -- Silent the stylistic rules in you IDE, but still auto fix them
+--     rulesCustomizations = customizations,
+--   },
+-- })
 
 return {
-  {
-    -- add pyright to lspconfig
-    "neovim/nvim-lspconfig",
-    ---@class PluginLspOpts
-    opts = {
-      ---@type lspconfig.options
-      servers = {
-        -- pyright will be automatically installed with mason and loaded with lspconfig
-        pyright = {},
-      },
-    },
-  },
-
   -- add tsserver and setup with typescript.nvim instead of lspconfig
   {
     "neovim/nvim-lspconfig",
@@ -74,10 +61,39 @@ return {
     },
     ---@class PluginLspOpts
     opts = {
-      ---@type lspconfig.options
+      -- -@type lspconfig.options
       servers = {
         -- tsserver will be automatically installed with mason and loaded with lspconfig
         tsserver = {},
+        eslint = {
+          filetypes = {
+            "javascript",
+            "javascriptreact",
+            "javascript.jsx",
+            "typescript",
+            "typescriptreact",
+            "typescript.tsx",
+            "vue",
+            "html",
+            "markdown",
+            "json",
+            "jsonc",
+            "yaml",
+            "toml",
+            "xml",
+            "gql",
+            "graphql",
+            "astro",
+            "svelte",
+            "css",
+            "less",
+            "scss",
+            "pcss",
+            "postcss",
+          },
+        },
+        pyright = {},
+        html = {},
       },
       -- you can do any additional lsp server setup here
       -- return true if you don't want this server to be setup with lspconfig
@@ -88,21 +104,6 @@ return {
           require("typescript").setup({ server = opts })
           return true
         end,
-        -- Specify * to use this function as a fallback for any server
-        ["*"] = function(server, opts) end,
-      },
-    },
-  },
-
-  -- for typescript, LazyVim also includes extra specs to properly setup lspconfig,
-  -- treesitter, mason and typescript.nvim. So instead of the above, you can use:
-  { import = "lazyvim.plugins.extras.lang.typescript" },
-  -- { import = "lazyvim.plugins.extras.linting.eslint" },
-  {
-    "neovim/nvim-lspconfig",
-    opts = {
-      servers = { eslint = {} },
-      setup = {
         eslint = function()
           require("lazyvim.util").lsp.on_attach(function(client)
             if client.name == "eslint" then
@@ -116,7 +117,14 @@ return {
             end
           end)
         end,
+        -- Specify * to use this function as a fallback for any server
+        ["*"] = function(server, opts) end,
       },
     },
   },
+
+  -- for typescript, LazyVim also includes extra specs to properly setup lspconfig,
+  -- treesitter, mason and typescript.nvim. So instead of the above, you can use:
+  -- { import = "lazyvim.plugins.extras.lang.typescript" },
+  -- { import = "lazyvim.plugins.extras.linting.eslint" },
 }
