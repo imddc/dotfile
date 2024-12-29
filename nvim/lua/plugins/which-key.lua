@@ -31,6 +31,12 @@ return {
       "<cmd>LazyGit<cr>",
       desc = "Open LazyGit",
     },
+    -- lazyGit
+    {
+      "<leader>lz",
+      "<cmd>LazyGit<cr>",
+      desc = "Open LazyGit",
+    },
     -- yazi
     {
       "<leader>yz",
