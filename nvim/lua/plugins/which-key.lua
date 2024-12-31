@@ -49,5 +49,11 @@ return {
       "<cmd>Yazi cwd<cr>",
       desc = "Open the file manager in nvim's working directory",
     },
+    {
+      -- telescpe search
+      "<leader>,",
+      "<cmd>Telescope live_grep<cr>",
+      desc = "搜索关键字 ctrl+shift+f",
+    },
   },
 }

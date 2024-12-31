@@ -16,7 +16,13 @@ return {
       opts = vim.tbl_deep_extend("force", opts or {}, {
         -- vue 组件 cmp增强
         sources = cmp.config.sources({
-          { name = "copilot", priority = 1000, group_index = 1 },
+          -- { name = "copilot", priority = 500, group_index = 1 },
+          { name = "codeium", priority = 500, group_index = 1 },
+          { name = "buffer", priority = 500, group_index = 2 },
+          { name = "luasnip", priority = 750, group_index = 1 },
+          { name = "path", priority = 250, group_index = 1 },
+          { name = "calc", priority = 100 },
+          { name = "friendly-snippets", priority = 250, group_index = 2 },
           {
             name = "nvim_lsp",
             ---@param entry cmp.Entry
@@ -38,13 +44,9 @@ return {
                 return true
               end
             end,
-            priority = 1000,
+            priority = 500,
             group_index = 1,
           },
-          { name = "buffer", priority = 500, group_index = 2 },
-          { name = "luasnip", priority = 750, group_index = 1 },
-          { name = "path", priority = 250, group_index = 1 },
-          { name = "calc", priority = 100 },
         }),
         window = {
           completion = cmp.config.window.bordered({
@@ -77,23 +79,6 @@ return {
           keyword_length = 1,
           completeopt = "menu,menuone,noinsert,noselect",
         },
-        -- formatting = {
-        --   format = function(_, item)
-        --     local icon = LazyVim.config.icons.kinds[item.kind]
-        --     if LazyVim.has("mini.icons") then
-        --       local mini_icon, _, _ = require("mini.icons").get("lsp", item.kind)
-        --       if mini_icon then
-        --         icon = mini_icon .. " "
-        --       end
-        --     end
-        --
-        --     if icon then
-        --       item.kind = icon .. item.kind
-        --     end
-        --
-        --     return item
-        --   end,
-        -- },
       })
       return opts
     end,

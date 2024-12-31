@@ -11,60 +11,18 @@ local customizations = {
   { rule = "*semi", severity = "off", fixable = true },
 }
 
--- local lspconfig = require("lspconfig")
--- Enable eslint for all supported languages
--- lspconfig.eslint.setup({
---   filetypes = {
---     "javascript",
---     "javascriptreact",
---     "javascript.jsx",
---     "typescript",
---     "typescriptreact",
---     "typescript.tsx",
---     "vue",
---     "html",
---     "markdown",
---     "json",
---     "jsonc",
---     "yaml",
---     "toml",
---     "xml",
---     "gql",
---     "graphql",
---     "astro",
---     "svelte",
---     "css",
---     "less",
---     "scss",
---     "pcss",
---     "postcss",
---   },
---   settings = {
---     -- Silent the stylistic rules in you IDE, but still auto fix them
---     rulesCustomizations = customizations,
---   },
--- })
-
 return {
   -- add tsserver and setup with typescript.nvim instead of lspconfig
   {
     "neovim/nvim-lspconfig",
-    dependencies = {
-      "jose-elias-alvarez/typescript.nvim",
-      init = function()
-        require("lazyvim.util").lsp.on_attach(function(_, buffer)
-          -- stylua: ignore
-          vim.keymap.set( "n", "<leader>co", "TypescriptOrganizeImports", { buffer = buffer, desc = "Organize Imports" })
-          vim.keymap.set("n", "<leader>cR", "TypescriptRenameFile", { desc = "Rename File", buffer = buffer })
-        end)
-      end,
-    },
     ---@class PluginLspOpts
     opts = {
       -- -@type lspconfig.options
       servers = {
         -- tsserver will be automatically installed with mason and loaded with lspconfig
         tsserver = {},
+        html = {},
+        cssls = {},
         eslint = {
           filetypes = {
             "javascript",
@@ -109,10 +67,12 @@ return {
               client.server_capabilities.documentFormattingProvider = true
             elseif client.name == "tsserver" then
               client.server_capabilities.documentFormattingProvider = false
-            -- elseif client.name == "vtsls" then
-            --   client.server_capabilities.documentFormattingProvider = false
-            elseif client.name == "volar" then
+            elseif client.name == "html" then
               client.server_capabilities.documentFormattingProvider = false
+              -- elseif client.name == "vtsls" then
+              --   client.server_capabilities.documentFormattingProvider = false
+              -- elseif client.name == "volar" then
+              --   client.server_capabilities.documentFormattingProvider = false
             end
           end)
         end,

@@ -4,3 +4,5 @@
 
 -- 禁用自动格式化, 使用自定义的格式化
 -- vim.g.autoformat = true
+
+vim.opt.last_status = 3
