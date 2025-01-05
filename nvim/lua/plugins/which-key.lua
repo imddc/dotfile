@@ -1,6 +1,5 @@
 return {
   "folke/which-key.nvim",
-  event = "VeryLazy",
   opts = {
     -- your configuration comes here
     -- or leave it empty to use the default settings
@@ -51,9 +50,15 @@ return {
     },
     {
       -- telescpe search
-      "<leader>,",
+      "<leader>.",
       "<cmd>Telescope live_grep<cr>",
       desc = "搜索关键字 ctrl+shift+f",
+    },
+    {
+      -- telescpe search
+      "<leader>td",
+      "<cmd>TodoTelescope<cr>",
+      desc = "todoTelescope",
     },
   },
 }

@@ -5,10 +5,6 @@ return {
   version = false, -- set this if you want to always pull the latest change
   opts = {
     -- add any opts here
-    providers = "openai,chatgpt",
-    openai = {
-      api_key_name = "sk-aaa7cf5515184291bff2f75151ca3a9f",
-    },
   },
   -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
   build = "make",
