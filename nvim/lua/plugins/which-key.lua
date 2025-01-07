@@ -60,5 +60,30 @@ return {
       "<cmd>TodoTelescope<cr>",
       desc = "todoTelescope",
     },
+    {
+      "<leader>db",
+      "<cmd>lua require'dap'.toggle_breakpoint()()<cr>",
+      desc = "打断点",
+    },
+    {
+      "<leader>dc",
+      "<cmd>lua require'dap'.continue()<cr>",
+      desc = "继续",
+    },
+    {
+      "<leader>dc",
+      "<cmd>lua require'dap'.continue()<cr>",
+      desc = "继续",
+    },
+    {
+      "<leader>do",
+      "<cmd>lua require'dap'.step_over()<cr>",
+      desc = "Step over",
+    },
+    {
+      "<leader>di",
+      "<cmd>lua require'dap'.step_into()<cr>",
+      desc = "Step into",
+    },
   },
 }
