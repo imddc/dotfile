@@ -164,6 +164,11 @@ run = "move-node-to-workspace I"
 if.app-id = 'com.jetbrains.intelli'
 run = "move-node-to-workspace I"
 
+# kitty
+[[on-window-detected]]
+if.app-id = 'net.kovidgoyal.kitty'
+run = ["move-node-to-workspace I"]
+
 #navicat
 [[on-window-detected]]
 if.app-id = 'com.electron.lark'
@@ -262,5 +267,5 @@ run = ["layout floating"]
 
 
 [[on-window-detected]]
-if.app-id = 'net.kovidgoyal.kitty'
-run = ["move-node-workspace I"]
+if.app-id = 'com.superace.updf.mac'
+run = ["layout floating"]
