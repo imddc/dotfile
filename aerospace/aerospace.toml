@@ -171,11 +171,6 @@ run = ["move-node-to-workspace I"]
 
 #navicat
 [[on-window-detected]]
-if.app-id = 'com.electron.lark'
-run = ["layout floating", "move-node-to-workspace O"]
-
-#navicat
-[[on-window-detected]]
 if.app-id = 'com.navicat.NavicatPremium'
 run = ["layout floating", "move-node-to-workspace O"]
 
@@ -268,4 +263,14 @@ run = ["layout floating"]
 
 [[on-window-detected]]
 if.app-id = 'com.superace.updf.mac'
+run = ["layout floating"]
+
+#feishu
+[[on-window-detected]]
+if.app-id = 'com.electron.lark'
+run = ["layout floating"]
+
+#feishu
+[[on-window-detected]]
+if.app-id = 'com.electron.lark.iron'
 run = ["layout floating"]
