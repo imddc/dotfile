@@ -17,6 +17,9 @@ return {
     "neovim/nvim-lspconfig",
     ---@class PluginLspOpts
     opts = {
+      inlay_hints = {
+        enabled = false,
+      },
       -- -@type lspconfig.options
       servers = {
         -- tsserver will be automatically installed with mason and loaded with lspconfig
@@ -69,10 +72,12 @@ return {
               client.server_capabilities.documentFormattingProvider = false
             elseif client.name == "html" then
               client.server_capabilities.documentFormattingProvider = false
-              -- elseif client.name == "vtsls" then
-              --   client.server_capabilities.documentFormattingProvider = false
-              -- elseif client.name == "volar" then
-              --   client.server_capabilities.documentFormattingProvider = false
+            -- elseif client.name == "prettier" then
+            --   client.server_capabilities.documentFormattingProvider = false
+            -- elseif client.name == "vtsls" then
+            --   client.server_capabilities.documentFormattingProvider = false
+            elseif client.name == "volar" then
+              client.server_capabilities.documentFormattingProvider = false
             end
           end)
         end,
