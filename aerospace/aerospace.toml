@@ -154,6 +154,10 @@ alt-shift-l = ['join-with right', 'mode main']
 if.app-id = 'company.thebrowser.Browser'
 run = "move-node-to-workspace U"
 
+##########################################
+#                 for dev                #
+##########################################
+
 # cursor
 [[on-window-detected]]
 if.app-id = 'com.todesktop.230313mzl4w4u92'
@@ -169,10 +173,40 @@ run = "move-node-to-workspace I"
 if.app-id = 'net.kovidgoyal.kitty'
 run = ["move-node-to-workspace I"]
 
+# wezterm
+[[on-window-detected]]
+if.app-id = 'com.github.Wezterm'
+run = "move-node-to-workspace O"
+
+# docker desktop
+[[on-window-detected]]
+if.app-id = 'com.electron.dockerdesktop'
+run = ["layout floating"]
+
 #navicat
 [[on-window-detected]]
 if.app-id = 'com.navicat.NavicatPremium'
 run = ["layout floating", "move-node-to-workspace O"]
+
+# redis
+[[on-window-detected]]
+if.app-id = 'me.qii404.another-redis-desktop-manager'
+run = ['layout floating', 'move-node-to-workspace O']
+
+# switchHosts
+[[on-window-detected]]
+if.app-id = 'SwitchHosts'
+run = ["layout floating"]
+
+
+##########################################
+#                 browsers               #
+##########################################
+
+# chrome
+[[on-window-detected]]
+if.app-id = 'com.google.Chrome'
+run = ['layout floating', 'move-node-to-workspace O']
 
 # mailmaster
 [[on-window-detected]]
@@ -184,93 +218,91 @@ run = ["layout floating", "move-node-to-workspace O"]
 if.app-id = 'md.obsidian'
 run = ["layout floating", "move-node-to-workspace O"]
 
-[[on-window-detected]]
-if.app-id = 'com.github.Wezterm'
-run = "move-node-to-workspace O"
 
-[[on-window-detected]]
-if.app-id = 'com.obsproject.obs-studio'
-run = ['layout floating', 'move-node-to-workspace O']
-
-[[on-window-detected]]
-if.app-id = 'com.google.Chrome'
-run = ['layout floating', 'move-node-to-workspace O']
-
-[[on-window-detected]]
-if.app-id = 'com.bili-message'
-run = ['layout floating', 'move-node-to-workspace O']
-
-[[on-window-detected]]
-if.app-id = 'me.qii404.another-redis-desktop-manager'
-run = ['layout floating', 'move-node-to-workspace O']
-
+# xmind
 [[on-window-detected]]
 if.app-id = 'net.xmind.vana.app'
 run = ['layout floating', 'move-node-to-workspace O']
 
+##########################################
+#                 social                 #
+##########################################
+
+# bili-message
+[[on-window-detected]]
+if.app-id = 'com.bili-message'
+run = ['layout floating', 'move-node-to-workspace O']
+
+# obs
+[[on-window-detected]]
+if.app-id = 'com.obsproject.obs-studio'
+run = ['layout floating', 'move-node-to-workspace O']
+
+# qq
 [[on-window-detected]]
 if.app-id = 'com.tencent.qq'
 run = ["layout floating", "move-node-to-workspace P"]
 
-[[on-window-detected]]
-if.app-id = 'com.bitcomet.macos'
-run = ["layout floating", "move-node-to-workspace P"]
-
-[[on-window-detected]]
-if.app-id = 'com.apple.finder'
-run = ["layout floating"]
-
-[[on-window-detected]]
-if.app-id = 'com.baidu.BaiduNetdisk-mac'
-run = ["layout floating"]
-
-[[on-window-detected]]
-if.app-id = 'SwitchHosts'
-run = ["layout floating"]
-
-[[on-window-detected]]
-if.app-id = 'com.tencent.meeting'
-run = ["layout floating"]
-
-[[on-window-detected]]
-if.app-id = 'cc.ffitch.shottr'
-run = ["layout floating"]
-
-[[on-window-detected]]
-if.app-id = 'ru.keepcoder.Telegram'
-run = ["layout floating"]
-
-[[on-window-detected]]
-if.app-id = 'cc.ffitch.shottr'
-run = ["layout floating"]
-
-[[on-window-detected]]
-if.app-id = 'com.electron.dockerdesktop'
-run = ["layout floating"]
-
+# 微信
 [[on-window-detected]]
 if.app-id = 'com.tencent.xinWeChat'
 run = ["layout floating"]
 
+# telegram
 [[on-window-detected]]
-if.app-id = 'com.openai.chat'
+if.app-id = 'ru.keepcoder.Telegram'
 run = ["layout floating"]
 
-[[on-window-detected]]
-if.app-id = 'com.runningwithcrayons.Alfred-Preferences'
-run = ["layout floating"]
-
-
-[[on-window-detected]]
-if.app-id = 'com.superace.updf.mac'
-run = ["layout floating"]
-
-#feishu
+# feishu
 [[on-window-detected]]
 if.app-id = 'com.electron.lark'
 run = ["layout floating"]
 
-#feishu
+# feishu 会议
 [[on-window-detected]]
 if.app-id = 'com.electron.lark.iron'
+run = ["layout floating"]
+
+# 腾讯会议
+[[on-window-detected]]
+if.app-id = 'com.tencent.meeting'
+run = ["layout floating"]
+
+##########################################
+#                  tools                 #
+##########################################
+
+# bitcomet
+[[on-window-detected]]
+if.app-id = 'com.bitcomet.macos'
+run = ["layout floating", "move-node-to-workspace P"]
+
+# finder
+[[on-window-detected]]
+if.app-id = 'com.apple.finder'
+run = ["layout floating"]
+
+# baidu网盘
+[[on-window-detected]]
+if.app-id = 'com.baidu.BaiduNetdisk-mac'
+run = ["layout floating"]
+
+# shottr
+[[on-window-detected]]
+if.app-id = 'cc.ffitch.shottr'
+run = ["layout floating"]
+
+# chatgpt
+[[on-window-detected]]
+if.app-id = 'com.openai.chat'
+run = ["layout floating"]
+
+# alfred 设置界面
+[[on-window-detected]]
+if.app-id = 'com.runningwithcrayons.Alfred-Preferences'
+run = ["layout floating"]
+
+# updf
+[[on-window-detected]]
+if.app-id = 'com.superace.updf.mac'
 run = ["layout floating"]
