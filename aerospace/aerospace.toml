@@ -306,3 +306,13 @@ run = ["layout floating"]
 [[on-window-detected]]
 if.app-id = 'com.superace.updf.mac'
 run = ["layout floating"]
+
+# 豆包
+[[on-window-detected]]
+if.app-id = 'com.bot.pc.doubao'
+run = ["layout floating"]
+
+# 汽水音乐
+[[on-window-detected]]
+if.app-id = 'com.soda.music'
+run = ["layout floating"]
