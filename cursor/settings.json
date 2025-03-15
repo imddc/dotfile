@@ -1,15 +1,14 @@
 {
   /// cursor user infinit
-  "lastUpdateCheck" : 0,
-  "updateVersion" : "",
-  "refreshToken" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhdXRoMHx1c2VyXzAxSk44RjJQQlZURjE4R1lUUlZHREpWWUE1IiwidGltZSI6IjE3NDA4MTk4MDMiLCJyYW5kb21uZXNzIjoiMTUzNTI1MmEtYjE1Yy00MWU4IiwiZXhwIjo0MzMyODE5ODAzLCJpc3MiOiJodHRwczovL2F1dGhlbnRpY2F0aW9uLmN1cnNvci5zaCIsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwgb2ZmbGluZV9hY2Nlc3MiLCJhdWQiOiJodHRwczovL2N1cnNvci5jb20ifQ.LQUQg-ISeCdSvvuajuiLazM3NI0tY7l3CFNRf7CL8JU",
-  "email" : "dolphinfight5655561@2925.com",
-  "updateChannel" : "none",
-  "updateMode" : "none",
-  "accessToken" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhdXRoMHx1c2VyXzAxSk44RjJQQlZURjE4R1lUUlZHREpWWUE1IiwidGltZSI6IjE3NDA4MTk4MDMiLCJyYW5kb21uZXNzIjoiMTUzNTI1MmEtYjE1Yy00MWU4IiwiZXhwIjo0MzMyODE5ODAzLCJpc3MiOiJodHRwczovL2F1dGhlbnRpY2F0aW9uLmN1cnNvci5zaCIsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwgb2ZmbGluZV9hY2Nlc3MiLCJhdWQiOiJodHRwczovL2N1cnNvci5jb20ifQ.LQUQg-ISeCdSvvuajuiLazM3NI0tY7l3CFNRf7CL8JU",
-  "updateAvailable" : false,
+  "lastUpdateCheck": 0,
+  "updateVersion": "",
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhdXRoMHx1c2VyXzAxSk44RjJQQlZURjE4R1lUUlZHREpWWUE1IiwidGltZSI6IjE3NDA4MTk4MDMiLCJyYW5kb21uZXNzIjoiMTUzNTI1MmEtYjE1Yy00MWU4IiwiZXhwIjo0MzMyODE5ODAzLCJpc3MiOiJodHRwczovL2F1dGhlbnRpY2F0aW9uLmN1cnNvci5zaCIsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwgb2ZmbGluZV9hY2Nlc3MiLCJhdWQiOiJodHRwczovL2N1cnNvci5jb20ifQ.LQUQg-ISeCdSvvuajuiLazM3NI0tY7l3CFNRf7CL8JU",
+  "email": "dolphinfight5655561@2925.com",
+  "updateChannel": "none",
+  "updateMode": "none",
+  "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhdXRoMHx1c2VyXzAxSk44RjJQQlZURjE4R1lUUlZHREpWWUE1IiwidGltZSI6IjE3NDA4MTk4MDMiLCJyYW5kb21uZXNzIjoiMTUzNTI1MmEtYjE1Yy00MWU4IiwiZXhwIjo0MzMyODE5ODAzLCJpc3MiOiJodHRwczovL2F1dGhlbnRpY2F0aW9uLmN1cnNvci5zaCIsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwgb2ZmbGluZV9hY2Nlc3MiLCJhdWQiOiJodHRwczovL2N1cnNvci5jb20ifQ.LQUQg-ISeCdSvvuajuiLazM3NI0tY7l3CFNRf7CL8JU",
+  "updateAvailable": false,
   "disableUpdates": true,
-
   /// format config
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -47,7 +46,6 @@
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-
   /// editors
   "editor.fontFamily": "Maple Mono NF CN, JetBrainsMonoNL Nerd Font Mono, Geist Mono",
   // "editor.fontFamily": "JetBrainsMonoNL Nerd Font Mono, monospace",
@@ -77,13 +75,11 @@
     "strings": true
   },
   "editor.fontSize": 14,
-
   /// explorer
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.compactFolders": false,
   "explorer.confirmPasteNative": false,
-
   // 标题栏
   "window.autoDetectColorScheme": true,
   "window.dialogStyle": "custom",
@@ -92,7 +88,6 @@
   // "window.titleBarStyle": "native",
   "window.newWindowDimensions": "maximized",
   "window.zoomLevel": 2,
-
   // workbench
   "workbench.editor.closeOnFileDelete": true,
   "workbench.editor.highlightModifiedTabs": true,
@@ -111,7 +106,6 @@
   "workbench.colorTheme": "Catppuccin Macchiato",
   "workbench.tree.enableStickyScroll": true,
   "workbench.iconTheme": "catppuccin-macchiato",
-
   // prettier
   "prettier.jsxSingleQuote": true,
   "prettier.semi": false,
@@ -123,7 +117,6 @@
   "prettier.bracketSpacing": true,
   "prettier.bracketSameLine": false,
   "prettier.singleAttributePerLine": true,
-
   // files
   "files.eol": "\n",
   "files.insertFinalNewline": true,
@@ -134,13 +127,11 @@
     "*.wxss": "css",
     "*.css": "tailwindcss"
   },
-
   // git
   "git.autofetch": true,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
   "git.untrackedChanges": "separate",
-
   /// gitlens
   "gitlens.views.commitDetails.files.layout": "tree",
   "gitlens.ai.experimental.openai.model": "gpt-3.5-turbo-16k",
@@ -153,7 +144,6 @@
   "gitlens.advanced.messages": {
     "suppressLineUncommittedWarning": true
   },
-
   // "github.copilot.enable": {
   //   "*": true,
   //   "plaintext": false,
@@ -161,7 +151,6 @@
   //   "scminput": false,
   //   "yaml": false
   // },
-
   /// terminal
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.cursorStyle": "line",
@@ -184,7 +173,7 @@
         "${env:windir}\\System32\\cmd.exe"
       ]
     },
-  "terminal.integrated.enableVisualBell": true,
+    "terminal.integrated.enableVisualBell": true,
     "Git Bash": {
       "source": "Git Bash"
     },
@@ -196,16 +185,13 @@
       "path": "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
     }
   },
-
   /// scm
   "scm.diffDecorationsGutterWidth": 2,
   "scm.inputFontSize": 14,
-
   /// debug
   "debug.onTaskErrors": "debugAnyway",
   "debug.console.fontSize": 14,
   "diffEditor.ignoreTrimWhitespace": false,
-
   /// search
   "search.exclude": {
     "**/.git": true,
@@ -228,9 +214,6 @@
   "emmet.includeLanguages": {
     "wxml": "html"
   },
-
-
-
   "i18n-ally.displayLanguage": "zh-CN",
   "security.workspace.trust.untrustedFiles": "open",
   "liveServer.settings.donotShowInfoMsg": true,
@@ -259,7 +242,9 @@
     "vueuse"
   ],
   "errorLens.fontFamily": "'JetBrains Mono','Fira Code',Menlo,Monaco,'Courier New', monospace",
-  "cSpell.ignoreRegExpList": ["axios"],
+  "cSpell.ignoreRegExpList": [
+    "axios"
+  ],
   "cSpell.customDictionaries": {
     "custom-dictionary-user": {
       "name": "custom-dictionary-user",
@@ -285,7 +270,7 @@
       "command": "vscode-neovim.escape",
       "args": []
     },
-    "jk":{
+    "jk": {
       "command": "vscode-neovim.escape",
       "args": []
     },
@@ -314,57 +299,109 @@
   "vim.leader": "<space>",
   "vim.insertModeKeyBindings": [
     {
-      "before": ["j", "j"],
-      "after": ["<Esc>"]
+      "before": [
+        "j",
+        "j"
+      ],
+      "after": [
+        "<Esc>"
+      ]
     },
     {
-      "before": ["j", "k"],
-      "after": ["<Esc>"]
+      "before": [
+        "j",
+        "k"
+      ],
+      "after": [
+        "<Esc>"
+      ]
     },
     {
-      "before": ["k", "k"],
-      "after": ["<Esc>"]
+      "before": [
+        "k",
+        "k"
+      ],
+      "after": [
+        "<Esc>"
+      ]
     }
   ],
   "vim.normalModeKeyBindings": [
     {
-      "before": ["H"],
-      "after": ["^"]
+      "before": [
+        "H"
+      ],
+      "after": [
+        "^"
+      ]
     },
     {
-      "before": ["L"],
-      "after": ["$"]
+      "before": [
+        "L"
+      ],
+      "after": [
+        "$"
+      ]
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     // 取消高亮
     {
-      "before": ["<leader>", "n", "h"],
-      "commands": [":nohl"]
+      "before": [
+        "<leader>",
+        "n",
+        "h"
+      ],
+      "commands": [
+        ":nohl"
+      ]
     },
     // 查看hover提示
     {
-      "before": ["<leader>", "k"],
-      "commands": ["editor.action.showHover"]
+      "before": [
+        "<leader>",
+        "k"
+      ],
+      "commands": [
+        "editor.action.showHover"
+      ]
     },
     // 跳转到下一个错误
     {
-      "before": ["]", "d"],
-      "commands": ["editor.action.marker.next"]
+      "before": [
+        "]",
+        "d"
+      ],
+      "commands": [
+        "editor.action.marker.next"
+      ]
     },
     // 跳转到上一个错误
     {
-      "before": ["[", "d"],
-      "commands": ["editor.action.marker.prev"]
+      "before": [
+        "[",
+        "d"
+      ],
+      "commands": [
+        "editor.action.marker.prev"
+      ]
     },
     // 添加注释
     {
-      "before": ["g", "c"],
-      "commands": ["editor.action.commentLine"]
+      "before": [
+        "g",
+        "c"
+      ],
+      "commands": [
+        "editor.action.commentLine"
+      ]
     },
     // format document
     {
-      "before": ["<leader>", "f"],
+      "before": [
+        "<leader>",
+        "f"
+      ],
       "commands": [
         "editor.action.formatDocument.none",
         "editor.action.formatDocument"
@@ -372,22 +409,19 @@
     }
   ],
   // ********** vim config end ********** //
-
   // ********** eslint config ********** //
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
   // Auto fix
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
     "source.organizeImports": "never"
   },
   // Silent the stylistic rules in you IDE, but still auto fix them
-
   /// liveServer
   "liveServer.settings.donotVerifyTags": true,
   "liveServer.settings.CustomBrowser": "chrome",
   "liveServer.settings.NoBrowser": true,
   "liveServer.settings.host": "localhost:2333",
-
   /// extensions
   "extensions.experimental.affinity": {
     "vscodevim.vim": 1,
@@ -398,16 +432,21 @@
   "accessibility.signals.terminalBell": {
     "sound": "on"
   },
-
-
   /// plugin
   "remote.extensionKind": {
-    "GitHub.copilot": ["ui"],
-    "github.copilot-chat": ["ui"]
+    "GitHub.copilot": [
+      "ui"
+    ],
+    "github.copilot-chat": [
+      "ui"
+    ]
   },
   "unocss.root": "packages/client",
   "tailwindCSS.experimental.classRegex": [
-    ["tv\\((([^()]*|\\([^()]*\\))*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+    [
+      "tv\\((([^()]*|\\([^()]*\\))*)\\)",
+      "[\"'`]([^\"'`]*).*?[\"'`]"
+    ]
   ],
   "tailwindCSS.classAttributes": [
     "class",
@@ -417,7 +456,6 @@
   ],
   "Codegeex.Privacy": true,
   "prisma.showPrismaDataPlatformNotification": false,
-
   /// projectManager
   "projectManager.git.baseFolders": [
     "Users/dccd/workspace"
