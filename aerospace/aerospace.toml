@@ -316,3 +316,8 @@ run = ["layout floating"]
 [[on-window-detected]]
 if.app-id = 'com.soda.music'
 run = ["layout floating"]
+
+# 阿里云
+[[on-window-detected]]
+if.app-id = 'com.alibaba-cloud.client'
+run = ["layout floating"]
