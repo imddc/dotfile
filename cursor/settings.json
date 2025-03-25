@@ -75,6 +75,16 @@
     "strings": true
   },
   "editor.fontSize": 14,
+  /// inlay hints
+  "vue.inlayHints.destructuredProps": true,
+  "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "javascript.inlayHints.parameterNames.enabled": "literals",
+  "javascript.inlayHints.parameterTypes.enabled": true,
+  "typescript.inlayHints.variableTypes.enabled": true,
+  "editor.inlayHints.fontFamily": "JetBrainsMonoNL Nerd Font Mono",
+  "editor.inlayHints.fontSize": 10,
+  "editor.inlayHints.padding": true,
+  "vue.inlayHints.vBindShorthand": true,
   /// explorer
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
@@ -102,7 +112,7 @@
   "workbench.tree.expandMode": "singleClick",
   "workbench.tree.indent": 10,
   "workbench.sideBar.location": "left",
-  "workbench.preferredDarkColorTheme": "Catppuccin Macchiato",
+  "workbench.preferredDarkColorTheme": "Vitesse Dark",
   "workbench.colorTheme": "Catppuccin Macchiato",
   "workbench.tree.enableStickyScroll": true,
   "workbench.iconTheme": "catppuccin-macchiato",
@@ -459,5 +469,5 @@
   /// projectManager
   "projectManager.git.baseFolders": [
     "Users/dccd/workspace"
-  ]
+  ],
 }
