@@ -1,0 +1,41 @@
+{
+  "mirrors": [
+    {
+      "name": "npm",
+      "url": "https://registry.npmjs.org/",
+      "description": "npm 镜像",
+      "is_custom": false
+    },
+    {
+      "name": "yarn",
+      "url": "https://registry.yarnpkg.com/",
+      "description": "yarn 镜像",
+      "is_custom": false
+    },
+    {
+      "name": "tencent",
+      "url": "https://mirrors.cloud.tencent.com/npm/",
+      "description": "腾讯云开源镜像站",
+      "is_custom": false
+    },
+    {
+      "name": "cnpm",
+      "url": "https://r.cnpmjs.org/",
+      "description": "cnpm 镜像",
+      "is_custom": false
+    },
+    {
+      "name": "taobao",
+      "url": "https://registry.npmmirror.com/",
+      "description": "淘宝镜像",
+      "is_custom": false
+    },
+    {
+      "name": "npmmirror",
+      "url": "https://skimdb.npmjs.com/registry/",
+      "description": "npmmirror 镜像",
+      "is_custom": false
+    }
+  ],
+  "selected": "taobao"
+}
