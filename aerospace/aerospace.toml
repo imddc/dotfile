@@ -317,6 +317,11 @@ run = ["layout floating"]
 if.app-id = 'com.soda.music'
 run = ["layout floating"]
 
+# 汽水音乐
+[[on-window-detected]]
+if.app-id = 'com.apple.Music'
+run = ["layout floating"]
+
 # 阿里云
 [[on-window-detected]]
 if.app-id = 'com.alibaba-cloud.client'
