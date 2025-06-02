@@ -1,0 +1,21 @@
+{
+  "browsers": {
+    "local": [
+      {
+        "command": "/Applications/Google Chrome.app",
+        "version": "134.0.6998.89",
+        "name": "chrome",
+        "re": {},
+        "type": "chrome",
+        "profile": "/Users/dccd/.config/browser-launcher/chrome-134.0.6998.89_4c14e5f9ab379"
+      },
+      {
+        "command": "/Applications/Safari.app",
+        "version": "18.2",
+        "name": "safari",
+        "type": "safari",
+        "profile": false
+      }
+    ]
+  }
+}
